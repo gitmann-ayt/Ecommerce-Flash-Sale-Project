@@ -1,0 +1,2 @@
+orderId,customerId,productId,quantity,priceAtPurchase,timestamp,status,paymentMethod
+ORD1785829396930,U222,P001,1,78.38,2026-08-04T12:43:16.940438244,PENDING,Wallet Balance

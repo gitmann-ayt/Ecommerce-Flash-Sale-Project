@@ -1,0 +1,4 @@
+id,role,name,email,passwordHash,walletBalance
+U001,ADMIN,Store Admin,admin@flashshoes.com,240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9,0.0
+U002,CUSTOMER,Alex Johnson,alex@example.com,b041c0aeb35bb0fa4aa668ca5a920b590196fdaf9a00eb852c9b7f4d123cc6d6,500.0
+U222,CUSTOMER,abcd,aytesamsuhail@gmail.com,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,500.0
