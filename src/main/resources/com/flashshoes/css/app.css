@@ -1,0 +1,184 @@
+/*
+ * FlashShoesFX global theme.
+ * Applied once per Scene (see MainApp.applyTheme). Uses TYPE selectors
+ * (.root, Button, TextField, ...) rather than custom style-classes, so it
+ * reskins every screen automatically without touching each UI file's Java
+ * code. Any inline setStyle(...) calls already in the code simply win over
+ * these rules for that one property (normal CSS cascade), so nothing breaks.
+ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #F4F6F9;
+    -fx-accent: #1F3A5F;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    -fx-background-color: #1F3A5F;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 18 8 18;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #29527F;
+}
+
+.button:pressed {
+    -fx-background-color: #16283F;
+}
+
+.button:disabled {
+    -fx-opacity: 0.55;
+    -fx-cursor: default;
+}
+
+/* Secondary / cancel-style buttons: give them the "secondary" style class in code
+   (optional — falls back gracefully to the primary look if not used). */
+.button.secondary {
+    -fx-background-color: #E3E7EC;
+    -fx-text-fill: #1F3A5F;
+}
+.button.secondary:hover {
+    -fx-background-color: #D3D9E0;
+}
+
+.button.danger {
+    -fx-background-color: #C0392B;
+}
+.button.danger:hover {
+    -fx-background-color: #A93226;
+}
+
+/* ---------- Text inputs ---------- */
+
+.text-field, .password-field, .text-area, .combo-box, .date-picker, .choice-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #D5DBE3;
+    -fx-border-width: 1;
+    -fx-padding: 6 10 6 10;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused,
+.combo-box:focused, .date-picker:focused, .choice-box:focused {
+    -fx-border-color: #1F3A5F;
+    -fx-border-width: 1.5;
+}
+
+/* ---------- Labels / headings ---------- */
+
+.label {
+    -fx-text-fill: #222;
+}
+
+.label.title, .app-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F3A5F;
+}
+
+.label.subtitle {
+    -fx-text-fill: #6B7684;
+}
+
+/* ---------- Tables & lists (used in Admin dashboard) ---------- */
+
+.table-view, .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #E1E5EA;
+    -fx-border-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1F3A5F;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F7F9FC;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #DCE8F7;
+    -fx-text-fill: #1F3A5F;
+}
+
+/* ---------- Tabs (Admin dashboard) ---------- */
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #E9EDF2;
+}
+
+.tab {
+    -fx-background-color: #E9EDF2;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #555;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #1F3A5F;
+}
+
+/* ---------- Scroll panes / bars ---------- */
+
+.scroll-pane, .scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+/* ---------- Separators ---------- */
+
+.separator *.line {
+    -fx-border-color: #E1E5EA;
+}
+
+/* ---------- Product / sale cards (CustomerDashboard) ----------
+   These target the plain VBox "cards" via a style class you can optionally
+   add in code: card.getStyleClass().add("product-card"); falls back fine if
+   you leave the existing inline setStyle as-is. */
+.product-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #E1E5EA;
+    -fx-effect: dropshadow(gaussian, rgba(31,58,95,0.12), 8, 0.1, 0, 2);
+}
+
+.product-card:hover {
+    -fx-border-color: #1F3A5F;
+    -fx-effect: dropshadow(gaussian, rgba(31,58,95,0.25), 12, 0.15, 0, 3);
+}
+
+/* ---------- Alert / dialog polish ---------- */
+
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane > *.button-bar > *.container {
+    -fx-background-color: transparent;
+}
