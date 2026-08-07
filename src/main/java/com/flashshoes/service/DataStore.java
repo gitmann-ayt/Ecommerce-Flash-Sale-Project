@@ -95,4 +95,7 @@ public class DataStore {
         flashSaleScheduler.stop();
         orderProcessor.stop();
     }
+
+    public void removeOrder(Order order) {
+    }
 }
