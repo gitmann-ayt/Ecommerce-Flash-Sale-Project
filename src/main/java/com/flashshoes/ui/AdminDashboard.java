@@ -52,7 +52,7 @@ public class AdminDashboard extends BorderPane {
         bar.setAlignment(Pos.CENTER_LEFT);
         bar.setStyle("-fx-background-color: #1F3A5F;");
 
-        Label title = new Label("FlashShoes — Admin");
+        Label title = new Label("FlashShoes - Admin");
         title.setTextFill(Color.WHITE);
         title.setFont(Font.font("System", FontWeight.BOLD, 20));
 

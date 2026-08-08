@@ -70,7 +70,7 @@ public class CheckoutDialog extends Dialog<Order> {
                 if (!reserved) {
                     for (Runnable r : rollbacks) r.run();
                     new Alert(Alert.AlertType.WARNING,
-                            "Sorry — " + product.getName() + " just sold out. Please update your cart.")
+                            "Sorry, " + product.getName() + " just sold out. Please update your cart.")
                             .showAndWait();
                     return null;
                 }

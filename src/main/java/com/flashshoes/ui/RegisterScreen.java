@@ -9,7 +9,17 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+import java.util.regex.Pattern;
+
 public class RegisterScreen extends VBox {
+
+    // Simple, deliberately permissive email shape check: something@something.something
+    // (not a full RFC 5322 validator - that's overkill for a course project and would
+    // reject plenty of valid real-world addresses; this just catches "clearly not an
+    // email" input like "asdf" or "name@" with no domain).
+    private static final Pattern EMAIL_PATTERN =
+            Pattern.compile("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$");
+    private static final int MIN_PASSWORD_LENGTH = 6;
 
     public RegisterScreen() {
         setSpacing(12);
@@ -28,7 +38,7 @@ public class RegisterScreen extends VBox {
         emailField.setMaxWidth(280);
 
         PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Password");
+        passwordField.setPromptText("Password (min " + MIN_PASSWORD_LENGTH + " characters)");
         passwordField.setMaxWidth(280);
 
         Label errorLabel = new Label();
@@ -46,6 +56,14 @@ public class RegisterScreen extends VBox {
 
             if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 errorLabel.setText("All fields are required.");
+                return;
+            }
+            if (!EMAIL_PATTERN.matcher(email).matches()) {
+                errorLabel.setText("Enter a valid email address (e.g. name@example.com).");
+                return;
+            }
+            if (password.length() < MIN_PASSWORD_LENGTH) {
+                errorLabel.setText("Password must be at least " + MIN_PASSWORD_LENGTH + " characters.");
                 return;
             }
             if (DataStore.getInstance().findUserByEmail(email) != null) {

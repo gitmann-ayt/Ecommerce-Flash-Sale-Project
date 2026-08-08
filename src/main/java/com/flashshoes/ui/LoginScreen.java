@@ -20,7 +20,7 @@ public class LoginScreen extends VBox {
         Label title = new Label("FlashShoes");
         title.setFont(Font.font("System", FontWeight.BOLD, 28));
 
-        Label subtitle = new Label("Flash sale shoe store — sign in to continue");
+        Label subtitle = new Label("Flash sale shoe store - sign in to continue");
         subtitle.setStyle("-fx-text-fill: #666;");
 
         TextField emailField = new TextField();
