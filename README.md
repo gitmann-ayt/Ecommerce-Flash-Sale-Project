@@ -44,36 +44,72 @@ src/main/java/com/flashshoes/
              (producer-consumer order settlement), FileManager (CSV I/O),
              DataStore (wires everything together, single source of truth)
   ui/        JavaFX screens — LoginScreen, RegisterScreen, CustomerDashboard,
+             ProductDetailsScreen (image, description, sizes, quantity,
+             reviews), OrderHistoryScreen (live order-tracking timeline),
              AdminDashboard (includes a live concurrency stress-test tab),
-             CheckoutDialog
+             CheckoutDialog (card / wallet / cash on delivery)
   SmokeTest.java   A standalone, no-GUI-needed test that loads the CSV data
                    and fires 20+ concurrent threads at a flash sale to prove
                    InventoryManager never oversells. Run it directly to see
                    the proof: `mvn compile exec:java -Dexec.mainClass=com.flashshoes.SmokeTest`
                    (or just run the class from your IDE).
 data/
-  products.csv, users.csv, flashsales.csv, orders.csv
-  images/    One placeholder card image per product (see "About the dataset")
-generate_data.py   Regenerates all of the above from scratch
+  products.csv, users.csv, flashsales.csv, orders.csv, reviews.csv
+  images/    One image per product (see "About the dataset")
+generate_data.py         Regenerates a synthetic catalogue from scratch
+import_fashion_dataset.py  Imports the real Kaggle dataset (see below)
 ```
 
 ## About the dataset
 
-The original plan was to use Kaggle's Myntra Fashion Product Images Dataset filtered to
-footwear. That dataset needs to be downloaded from kaggle.com, which wasn't reachable from
-the sandbox this project was built in — so `generate_data.py` instead **synthesizes** a
-realistic 60-item shoe catalogue (real brand-style names, real category/price patterns
-across Running/Casual/Formal/Sports/Sandals) and draws a simple labeled placeholder card
-per product instead of a real photo.
+By default (`python3 generate_data.py`), the catalogue is **synthesized**: realistic
+brand-style names, real category/price patterns across Running/Casual/Formal/Sports/Sandals,
+simple drawn placeholder card images, and seeded fake reviews. This is what ships out of
+the box so the app runs immediately with no downloads required.
 
-**To swap in the real Kaggle dataset and real photos:**
-1. Download "Fashion Product Images Dataset" from Kaggle, filter `styles.csv` to
-   `masterCategory == "Footwear"`.
-2. Match each row's `id` to its image in the dataset's `images/` folder.
-3. Write your own loader (or adapt `generate_data.py`) that maps those columns into
-   `data/products.csv`'s schema (`id,name,brand,category,gender,price,stock,imagePath`) —
-   you'll need to invent a `price` column since the dataset doesn't include one.
-4. Point `imagePath` at the real downloaded image files instead of `data/images/*.png`.
+**To use the real Kaggle dataset (real names, brands, and real photos):**
+
+1. Download **Fashion Product Images (Small)** from Kaggle:
+   https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
+   Unzip it — you'll get a `styles.csv` file and an `images/` folder of real `.jpg` photos.
+2. Run the import script from the project root:
+   ```bash
+   python3 import_fashion_dataset.py --styles /path/to/styles.csv --images /path/to/images --limit 300
+   ```
+   This rewrites `data/products.csv` with real product names/brands/prices/sizes/descriptions,
+   copies the matching real photos into `data/images/`, and generates `data/reviews.csv`
+   with seeded fake reviews.
+   - `--limit` caps how many products get imported (sampled evenly across categories) —
+     300 keeps the catalogue browsing-fast; raise it if you want more.
+   - `--categories` lets you narrow to `Footwear`, `Apparel`, `Accessories`, or any
+     combination (default is all three).
+3. Re-run `mvn javafx:run` — the catalogue, category chips, and product photos are now
+   backed by real data.
+4. Your existing `users.csv` (accounts/passwords) is left untouched by the import.
+
+**Note on categories:** the dataset doesn't have a "Khusa" tag specifically — its own
+`articleType` field (Casual Shoes, Formal Shoes, Sports Shoes, Sandals, Heels, Flip Flops,
+etc.) becomes the category chips you see in the catalogue, since that's what's actually in
+the data.
+
+Prices are synthesized either way, since neither dataset includes real prices — the
+synthetic version uses category-based ranges (see `PRICE_RANGES` in either script).
+
+## New: browsing & checkout flow
+
+- **Catalogue** now has a search bar (matches name/brand) and clickable category chips
+  above the product grid.
+- Clicking a product card opens **Product Details**: full image, description, a size
+  picker, a quantity stepper (capped at remaining stock), and real/seeded reviews with
+  star ratings.
+- **Checkout** now actually asks for card number/expiry/CVV when "Credit Card" is
+  selected, and validates them (16-digit number, MM/YY, 3–4 digit CVV) before the order
+  is allowed to proceed — it no longer silently empties the cart on an unfilled form.
+- **"My Orders"** is now a full screen (`OrderHistoryScreen`) showing each order with a
+  live status timeline: Placed → Confirmed → Packed → Shipped → Out for Delivery →
+  Delivered. `OrderProcessor` advances a submitted order through these stages
+  automatically in the background (a few seconds apart) so you can watch it progress
+  during a demo.
 
 Re-running `python3 generate_data.py` at any point regenerates fresh synthetic data
 (including flash sales timed relative to "now" — useful right before a demo/viva so

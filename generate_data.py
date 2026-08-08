@@ -61,6 +61,26 @@ CATEGORY_COLORS_RGB = {
     "Sandals":  (243, 156, 18),
 }
 
+SIZES_BY_CATEGORY = {
+    "Running": ["7", "8", "9", "10", "11"], "Casual": ["7", "8", "9", "10", "11"],
+    "Formal": ["7", "8", "9", "10", "11"], "Sports": ["7", "8", "9", "10", "11"],
+    "Sandals": ["6", "7", "8", "9", "10"],
+}
+REVIEWER_NAMES = [
+    "Ayesha K.", "Bilal R.", "Sara M.", "Hamza T.", "Fatima A.", "Usman S.",
+    "Zainab N.", "Ali H.", "Mahnoor I.", "Omar F.", "Hira W.", "Danish Q.",
+]
+POSITIVE_COMMENTS = [
+    "Great quality for the price, fits true to size.",
+    "Really happy with this — looks even better in person.",
+    "Comfortable and stylish, would buy again.",
+    "Exactly as described, fast to get used to and looks great.",
+]
+MIXED_COMMENTS = [
+    "Decent, but sizing ran a little small for me.",
+    "Good product overall, delivery took a bit long.",
+]
+
 products = []
 pid = 1
 for category, name_parts in NAME_PARTS_BY_CATEGORY.items():
@@ -77,10 +97,11 @@ for category, name_parts in NAME_PARTS_BY_CATEGORY.items():
         stock = random.randint(*STOCK_RANGE)
         product_id = f"P{pid:03d}"
         image_path = f"data/images/{product_id}.png"
+        description = f"{name} — a {color.lower()} {category.lower()} shoe from {brand}, built for everyday {category.lower()} wear."
         products.append({
             "id": product_id, "name": name, "brand": brand, "category": category,
             "gender": gender, "price": price, "stock": stock, "imagePath": image_path,
-            "color": color,
+            "color": color, "sizes": "|".join(SIZES_BY_CATEGORY[category]), "description": description,
         })
         pid += 1
 
@@ -141,10 +162,27 @@ fallback.save(os.path.join(IMG_DIR, "placeholder.png"))
 
 with open(os.path.join(DATA_DIR, "products.csv"), "w", newline="") as f:
     w = csv.writer(f)
-    w.writerow(["id", "name", "brand", "category", "gender", "price", "stock", "imagePath"])
+    w.writerow(["id", "name", "brand", "category", "gender", "price", "stock", "imagePath", "sizes", "description"])
     for p in products:
         w.writerow([p["id"], p["name"], p["brand"], p["category"], p["gender"],
-                    p["price"], p["stock"], p["imagePath"]])
+                    p["price"], p["stock"], p["imagePath"], p["sizes"], p["description"]])
+
+# ---------------- WRITE reviews.csv (fake, seeded) ----------------
+
+reviews = []
+rid = 1
+for p in products:
+    for _ in range(random.randint(2, 5)):
+        rating = random.choices([5, 4, 3, 2], weights=[45, 35, 15, 5])[0]
+        comment = random.choice(POSITIVE_COMMENTS if rating >= 4 else MIXED_COMMENTS)
+        date = (datetime.now() - timedelta(days=random.randint(1, 180))).date().isoformat()
+        reviews.append([f"R{rid}", p["id"], random.choice(REVIEWER_NAMES), rating, comment, date])
+        rid += 1
+
+with open(os.path.join(DATA_DIR, "reviews.csv"), "w", newline="") as f:
+    w = csv.writer(f)
+    w.writerow(["reviewId", "productId", "reviewerName", "rating", "comment", "date"])
+    w.writerows(reviews)
 
 # ---------------- WRITE users.csv ----------------
 
@@ -199,6 +237,6 @@ with open(os.path.join(DATA_DIR, "flashsales.csv"), "w", newline="") as f:
 
 with open(os.path.join(DATA_DIR, "orders.csv"), "w", newline="") as f:
     w = csv.writer(f)
-    w.writerow(["orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod"])
+    w.writerow(["orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod", "size"])
 
-print(f"Generated {len(products)} products, {len(users)} users, {len(flash_sales)} flash sales.")
+print(f"Generated {len(products)} products, {len(users)} users, {len(flash_sales)} flash sales, {len(reviews)} reviews.")

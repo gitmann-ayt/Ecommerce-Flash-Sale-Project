@@ -11,6 +11,7 @@ public class Cart {
 
     private final Customer customer;
     private final Map<Product, Integer> items = new LinkedHashMap<>();
+    private final Map<Product, String> selectedSizes = new LinkedHashMap<>();
 
     public Cart(Customer customer) {
         this.customer = customer;
@@ -20,8 +21,19 @@ public class Cart {
         items.merge(product, qty, Integer::sum);
     }
 
+    /** Adds an item remembering which size the customer picked on the product page. */
+    public void addItem(Product product, int qty, String size) {
+        items.merge(product, qty, Integer::sum);
+        if (size != null && !size.isBlank()) selectedSizes.put(product, size);
+    }
+
+    public String getSelectedSize(Product product) {
+        return selectedSizes.getOrDefault(product, "");
+    }
+
     public void removeItem(Product product) {
         items.remove(product);
+        selectedSizes.remove(product);
     }
 
     public void updateQuantity(Product product, int qty) {
@@ -31,6 +43,7 @@ public class Cart {
 
     public void clear() {
         items.clear();
+        selectedSizes.clear();
     }
 
     public double getTotal() {

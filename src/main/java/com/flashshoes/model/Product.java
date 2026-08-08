@@ -15,9 +15,18 @@ public class Product {
     private double price;
     private int stockQuantity;
     private String imagePath;
+    private java.util.List<String> sizes = new java.util.ArrayList<>();
+    private String description = "";
 
     public Product(String productId, String name, String brand, String category,
                     String gender, double price, int stockQuantity, String imagePath) {
+        this(productId, name, brand, category, gender, price, stockQuantity, imagePath,
+                java.util.List.of("S", "M", "L", "XL"), "");
+    }
+
+    public Product(String productId, String name, String brand, String category,
+                    String gender, double price, int stockQuantity, String imagePath,
+                    java.util.List<String> sizes, String description) {
         this.productId = productId;
         this.name = name;
         this.brand = brand;
@@ -26,6 +35,8 @@ public class Product {
         this.price = price;
         this.stockQuantity = stockQuantity;
         this.imagePath = imagePath;
+        this.sizes = sizes != null ? sizes : new java.util.ArrayList<>();
+        this.description = description != null ? description : "";
     }
 
     public synchronized void updateStock(int delta) {
@@ -48,6 +59,10 @@ public class Product {
     public synchronized void setStockQuantity(int stockQuantity) { this.stockQuantity = stockQuantity; }
     public String getImagePath() { return imagePath; }
     public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+    public java.util.List<String> getSizes() { return sizes; }
+    public void setSizes(java.util.List<String> sizes) { this.sizes = sizes; }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
     @Override
     public String toString() {

@@ -1,5 +1,7 @@
 package com.flashshoes.ui;
 
+import com.flashshoes.model.Customer;
+import com.flashshoes.model.Product;
 import com.flashshoes.service.DataStore;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -21,20 +23,46 @@ public class MainApp extends Application {
         stage.setOnCloseRequest(e -> DataStore.getInstance().shutdown());
     }
 
+    static String css() {
+        var res = MainApp.class.getResource("/styles.css");
+        return res != null ? res.toExternalForm() : "";
+    }
+
     public static void showLogin() {
-        primaryStage.setScene(new Scene(new LoginScreen(), 480, 420));
+        Scene scene = new Scene(new LoginScreen(), 480, 440);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
     }
 
     public static void showRegister() {
-        primaryStage.setScene(new Scene(new RegisterScreen(), 480, 460));
+        Scene scene = new Scene(new RegisterScreen(), 480, 480);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
     }
 
     public static void showCustomerDashboard() {
-        primaryStage.setScene(new Scene(new CustomerDashboard(), 1100, 720));
+        Scene scene = new Scene(new CustomerDashboard(), 1100, 720);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
     }
 
     public static void showAdminDashboard() {
-        primaryStage.setScene(new Scene(new AdminDashboard(), 1100, 720));
+        Scene scene = new Scene(new AdminDashboard(), 1100, 720);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
+    }
+
+    public static void showProductDetails(Product product) {
+        Scene scene = new Scene(new ProductDetailsScreen(product, MainApp::showCustomerDashboard), 1100, 720);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
+    }
+
+    public static void showOrderHistory() {
+        Customer customer = (Customer) DataStore.getInstance().getCurrentUser();
+        Scene scene = new Scene(new OrderHistoryScreen(customer, MainApp::showCustomerDashboard), 1100, 720);
+        scene.getStylesheets().add(css());
+        primaryStage.setScene(scene);
     }
 
     public static void main(String[] args) {

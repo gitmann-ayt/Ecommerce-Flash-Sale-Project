@@ -24,6 +24,7 @@ public class DataStore {
     private final Map<String, User> usersById = new LinkedHashMap<>();
     private final List<FlashSale> flashSales = new ArrayList<>();
     private final List<Order> orders = new ArrayList<>();
+    private final List<Review> reviews = new ArrayList<>();
 
     private User currentUser;
 
@@ -49,6 +50,7 @@ public class DataStore {
             if (u instanceof Customer c) customersById.put(c.getUserId(), c);
         }
         orders.addAll(fileManager.loadOrders(customersById, productsById));
+        reviews.addAll(fileManager.loadReviews());
     }
 
     // ---------------- persistence passthroughs ----------------
@@ -82,6 +84,13 @@ public class DataStore {
 
     public List<Order> getAllOrders() { return orders; }
     public void addOrder(Order o) { orders.add(o); persistOrders(); }
+
+    public List<Review> getReviewsFor(String productId) {
+        List<Review> out = new ArrayList<>();
+        for (Review r : reviews) if (r.getProductId().equals(productId)) out.add(r);
+        return out;
+    }
+    public void addReview(Review r) { reviews.add(r); fileManager.saveReviews(reviews); }
 
     public User getCurrentUser() { return currentUser; }
     public void setCurrentUser(User currentUser) { this.currentUser = currentUser; }

@@ -59,8 +59,30 @@ public class OrderProcessor implements Runnable {
     }
 
     public void processOrder(Order order) throws InterruptedException {
-        Thread.sleep(800); // simulated payment-gateway / fulfilment delay
+        Thread.sleep(800); // simulated payment-gateway delay
         order.updateStatus(OrderStatus.CONFIRMED);
+        notifyListener(order);
+
+        // Simulate the rest of the fulfilment pipeline in the background so the
+        // Order Tracking screen has real stages to show, without blocking the UI thread.
+        Thread.sleep(2500);
+        order.updateStatus(OrderStatus.PACKED);
+        notifyListener(order);
+
+        Thread.sleep(2500);
+        order.updateStatus(OrderStatus.SHIPPED);
+        notifyListener(order);
+
+        Thread.sleep(2500);
+        order.updateStatus(OrderStatus.OUT_FOR_DELIVERY);
+        notifyListener(order);
+
+        Thread.sleep(2500);
+        order.updateStatus(OrderStatus.DELIVERED);
+        notifyListener(order);
+    }
+
+    private void notifyListener(Order order) {
         if (listener != null) {
             Platform.runLater(() -> listener.onOrderSettled(order));
         }

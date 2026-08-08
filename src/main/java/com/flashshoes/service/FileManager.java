@@ -38,23 +38,54 @@ public class FileManager {
         List<Product> products = new ArrayList<>();
         List<String[]> rows = readCsv("products.csv");
         for (String[] r : rows) {
-            // id,name,brand,category,gender,price,stock,imagePath
+            // id,name,brand,category,gender,price,stock,imagePath,sizes,description
+            List<String> sizes = (r.length > 8 && !r[8].isBlank())
+                    ? Arrays.asList(r[8].split("\\|"))
+                    : List.of("S", "M", "L", "XL");
+            String description = r.length > 9 ? r[9] : "";
             products.add(new Product(r[0], r[1], r[2], r[3], r[4],
-                    Double.parseDouble(r[5]), Integer.parseInt(r[6]), r[7]));
+                    Double.parseDouble(r[5]), Integer.parseInt(r[6]), r[7], sizes, description));
         }
         return products;
     }
 
     public void saveProducts(Collection<Product> products) {
         List<String[]> rows = new ArrayList<>();
-        rows.add(new String[]{"id", "name", "brand", "category", "gender", "price", "stock", "imagePath"});
+        rows.add(new String[]{"id", "name", "brand", "category", "gender", "price", "stock", "imagePath", "sizes", "description"});
         for (Product p : products) {
             rows.add(new String[]{
                     p.getProductId(), p.getName(), p.getBrand(), p.getCategory(), p.getGender(),
-                    String.valueOf(p.getPrice()), String.valueOf(p.getStockQuantity()), p.getImagePath()
+                    String.valueOf(p.getPrice()), String.valueOf(p.getStockQuantity()), p.getImagePath(),
+                    String.join("|", p.getSizes()), p.getDescription()
             });
         }
         writeCsv("products.csv", rows);
+    }
+
+    // ---------------- REVIEWS ----------------
+
+    public List<Review> loadReviews() {
+        List<Review> reviews = new ArrayList<>();
+        List<String[]> rows = readCsv("reviews.csv");
+        for (String[] r : rows) {
+            // reviewId,productId,reviewerName,rating,comment,date
+            if (r.length < 6) continue;
+            reviews.add(new Review(r[0], r[1], r[2], Integer.parseInt(r[3]), r[4],
+                    java.time.LocalDate.parse(r[5])));
+        }
+        return reviews;
+    }
+
+    public void saveReviews(Collection<Review> reviews) {
+        List<String[]> rows = new ArrayList<>();
+        rows.add(new String[]{"reviewId", "productId", "reviewerName", "rating", "comment", "date"});
+        for (Review r : reviews) {
+            rows.add(new String[]{
+                    r.getReviewId(), r.getProductId(), r.getReviewerName(),
+                    String.valueOf(r.getRating()), r.getComment(), r.getDate().toString()
+            });
+        }
+        writeCsv("reviews.csv", rows);
     }
 
     // ---------------- USERS ----------------
@@ -126,7 +157,7 @@ public class FileManager {
         List<String[]> rows = readCsv("orders.csv");
         Map<String, List<String[]>> byOrderId = new LinkedHashMap<>();
         for (String[] r : rows) {
-            // orderId,customerId,productId,quantity,priceAtPurchase,timestamp,status,paymentMethod
+            // orderId,customerId,productId,quantity,priceAtPurchase,timestamp,status,paymentMethod,size
             byOrderId.computeIfAbsent(r[0], k -> new ArrayList<>()).add(r);
         }
         for (Map.Entry<String, List<String[]>> entry : byOrderId.entrySet()) {
@@ -138,7 +169,8 @@ public class FileManager {
             for (String[] line : lines) {
                 Product product = productsById.get(line[2]);
                 if (product == null) continue;
-                items.add(new OrderItem(product, Integer.parseInt(line[3]), Double.parseDouble(line[4])));
+                String size = line.length > 8 ? line[8] : "";
+                items.add(new OrderItem(product, Integer.parseInt(line[3]), Double.parseDouble(line[4]), size));
             }
             Order order = new Order(entry.getKey(), customer, items);
             order.updateStatus(OrderStatus.valueOf(first[6]));
@@ -150,14 +182,15 @@ public class FileManager {
 
     public void saveOrders(Collection<Order> orders) {
         List<String[]> rows = new ArrayList<>();
-        rows.add(new String[]{"orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod"});
+        rows.add(new String[]{"orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod", "size"});
         for (Order o : orders) {
             for (OrderItem item : o.getItems()) {
                 rows.add(new String[]{
                         o.getOrderId(), o.getCustomer().getUserId(), item.getProduct().getProductId(),
                         String.valueOf(item.getQuantity()), String.valueOf(item.getPriceAtPurchase()),
                         o.getTimestamp().format(FMT), o.getStatus().name(),
-                        o.getPaymentMethodUsed() == null ? "" : o.getPaymentMethodUsed()
+                        o.getPaymentMethodUsed() == null ? "" : o.getPaymentMethodUsed(),
+                        item.getSelectedSize() == null ? "" : item.getSelectedSize()
                 });
             }
         }

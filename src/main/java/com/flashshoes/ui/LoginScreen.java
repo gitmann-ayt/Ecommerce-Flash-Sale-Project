@@ -6,36 +6,55 @@ import com.flashshoes.service.DataStore;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class LoginScreen extends VBox {
+public class LoginScreen extends StackPane {
 
     public LoginScreen() {
-        setSpacing(14);
-        setPadding(new Insets(40));
-        setAlignment(Pos.CENTER);
+        setStyle("-fx-background-color: #F0F4F8;");
 
+        // Card
+        VBox card = new VBox(14);
+        card.getStyleClass().add("auth-card");
+        card.setMaxWidth(340);
+        card.setAlignment(Pos.CENTER_LEFT);
+
+        // Logo / title row
+        Label logo = new Label("👟");
+        logo.setFont(Font.font(32));
         Label title = new Label("FlashShoes");
-        title.setFont(Font.font("System", FontWeight.BOLD, 28));
+        title.getStyleClass().add("auth-title");
+        HBox titleRow = new HBox(8, logo, title);
+        titleRow.setAlignment(Pos.CENTER_LEFT);
 
         Label subtitle = new Label("Flash sale shoe store — sign in to continue");
-        subtitle.setStyle("-fx-text-fill: #666;");
+        subtitle.getStyleClass().add("auth-subtitle");
 
+        Separator sep = new Separator();
+        sep.setStyle("-fx-background-color: #E5E7EB;");
+
+        Label emailLbl = new Label("Email");
+        emailLbl.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #374151;");
         TextField emailField = new TextField();
-        emailField.setPromptText("Email");
-        emailField.setMaxWidth(280);
+        emailField.setPromptText("you@example.com");
+        emailField.setMaxWidth(Double.MAX_VALUE);
 
+        Label pwLbl = new Label("Password");
+        pwLbl.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #374151;");
         PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Password");
-        passwordField.setMaxWidth(280);
+        passwordField.setPromptText("••••••••");
+        passwordField.setMaxWidth(Double.MAX_VALUE);
 
         Label errorLabel = new Label();
-        errorLabel.setStyle("-fx-text-fill: #c0392b;");
+        errorLabel.getStyleClass().add("auth-error");
+        errorLabel.setWrapText(true);
 
         Button loginBtn = new Button("Log In");
-        loginBtn.setMaxWidth(280);
+        loginBtn.getStyleClass().add("btn-primary");
+        loginBtn.setMaxWidth(Double.MAX_VALUE);
         loginBtn.setDefaultButton(true);
         loginBtn.setOnAction(e -> {
             String email = emailField.getText().trim();
@@ -55,12 +74,22 @@ public class LoginScreen extends VBox {
 
         Hyperlink registerLink = new Hyperlink("New here? Create a customer account");
         registerLink.setOnAction(e -> MainApp.showRegister());
+        registerLink.setStyle("-fx-padding: 0;");
 
-        Label demoHint = new Label("Demo admin: admin@flashshoes.com / admin123\nDemo customer: alex@example.com / customer123");
-        demoHint.setStyle("-fx-text-fill: #999; -fx-font-size: 10;");
+        Separator sep2 = new Separator();
+        Label demoHint = new Label("Demo  admin@flashshoes.com / admin123\nDemo  alex@example.com / customer123");
+        demoHint.getStyleClass().add("auth-hint");
         demoHint.setWrapText(true);
-        demoHint.setAlignment(Pos.CENTER);
 
-        getChildren().addAll(title, subtitle, emailField, passwordField, errorLabel, loginBtn, registerLink, demoHint);
+        card.getChildren().addAll(
+                titleRow, subtitle, sep,
+                emailLbl, emailField,
+                pwLbl, passwordField,
+                errorLabel, loginBtn, registerLink,
+                sep2, demoHint
+        );
+
+        setAlignment(card, Pos.CENTER);
+        getChildren().add(card);
     }
 }

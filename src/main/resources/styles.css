@@ -1,0 +1,383 @@
+/* =============================================
+   FlashShoes — Global Stylesheet
+   Clean, modern, student-made feel.
+   ============================================= */
+
+/* ---- Root / Color Palette ---- */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #F7F8FA;
+
+    /* Named colors used throughout */
+    -brand-navy:    #1E3A5F;
+    -brand-blue:    #2563EB;
+    -brand-red:     #DC2626;
+    -brand-light:   #EFF6FF;
+    -text-primary:  #111827;
+    -text-secondary:#6B7280;
+    -border-color:  #E5E7EB;
+    -card-bg:       #FFFFFF;
+    -sidebar-bg:    #F1F5F9;
+}
+
+/* ---- Top Navigation Bar ---- */
+.top-bar {
+    -fx-background-color: #1E3A5F;
+    -fx-padding: 12 20 12 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 6, 0, 0, 2);
+}
+
+.top-bar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.top-bar-subtitle {
+    -fx-text-fill: rgba(255,255,255,0.75);
+    -fx-font-size: 12px;
+}
+
+/* ---- Buttons ---- */
+.button {
+    -fx-background-radius: 6;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-border-width: 0;
+}
+
+/* Primary blue button */
+.btn-primary {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.btn-primary:hover {
+    -fx-background-color: #1D4ED8;
+}
+.btn-primary:pressed {
+    -fx-background-color: #1E40AF;
+}
+
+/* Danger/red button */
+.btn-danger {
+    -fx-background-color: #DC2626;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.btn-danger:hover {
+    -fx-background-color: #B91C1C;
+}
+
+/* Ghost / secondary button */
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255,255,255,0.55);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+.btn-ghost:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+/* Outline button for lighter backgrounds */
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2563EB;
+    -fx-border-color: #2563EB;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+.btn-outline:hover {
+    -fx-background-color: #EFF6FF;
+}
+
+/* Small icon-like remove button */
+.btn-remove {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9CA3AF;
+    -fx-padding: 2 6 2 6;
+    -fx-font-size: 11px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+.btn-remove:hover {
+    -fx-text-fill: #DC2626;
+    -fx-border-color: #DC2626;
+}
+
+/* ---- Text Fields ---- */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 13px;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #2563EB;
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.2), 4, 0, 0, 0);
+}
+
+/* ---- ComboBox ---- */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+.combo-box:focused {
+    -fx-border-color: #2563EB;
+}
+.combo-box .list-cell {
+    -fx-padding: 5 10 5 10;
+}
+
+/* ---- Auth Screens (Login / Register) ---- */
+.auth-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 16, 0, 0, 4);
+    -fx-padding: 40 40 36 40;
+}
+
+.auth-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E3A5F;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.auth-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+
+.auth-error {
+    -fx-text-fill: #DC2626;
+    -fx-font-size: 12px;
+}
+
+.auth-hint {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 10.5px;
+}
+
+.auth-link {
+    -fx-text-fill: #2563EB;
+    -fx-font-size: 12px;
+}
+
+/* ---- Product Card ---- */
+.product-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 8, 0, 0, 2);
+    -fx-padding: 0;
+}
+.product-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 12, 0, 0, 4);
+    -fx-border-color: #BFDBFE;
+}
+
+.product-name {
+    -fx-font-weight: bold;
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #111827;
+    -fx-wrap-text: true;
+}
+.product-brand {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 10.5px;
+}
+.product-price {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #111827;
+}
+.product-price-sale {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #DC2626;
+}
+.product-stock {
+    -fx-font-size: 10.5px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* ---- Flash Sale Banner ---- */
+.flash-banner {
+    -fx-background-color: #FEF2F2;
+    -fx-background-radius: 8;
+    -fx-border-color: #FECACA;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-padding: 10 14 10 14;
+}
+.flash-banner-title {
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #DC2626;
+}
+.flash-banner-line {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7F1D1D;
+}
+
+/* ---- Cart Panel ---- */
+.cart-panel {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 0 1;
+    -fx-padding: 16;
+}
+.cart-header {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E3A5F;
+}
+.cart-total {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+.cart-item-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #374151;
+    -fx-wrap-text: true;
+}
+.cart-empty {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 12px;
+}
+.cart-divider {
+    -fx-background-color: #E5E7EB;
+    -fx-pref-height: 1;
+}
+
+/* ---- Section Label (Catalogue, etc.) ---- */
+.section-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E3A5F;
+    -fx-padding: 0 0 4 0;
+}
+
+/* ---- Tables ---- */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+.table-view .column-header-background {
+    -fx-background-color: #F9FAFB;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+    -fx-border-width: 1;
+}
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+    -fx-font-size: 12px;
+}
+.table-row-cell {
+    -fx-border-color: transparent transparent #F3F4F6 transparent;
+    -fx-background-color: white;
+}
+.table-row-cell:selected {
+    -fx-background-color: #EFF6FF;
+    -fx-text-fill: #1E40AF;
+}
+.table-row-cell:odd {
+    -fx-background-color: #FAFAFA;
+}
+.table-row-cell:odd:selected {
+    -fx-background-color: #EFF6FF;
+}
+
+/* ---- Tab Pane ---- */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #F1F5F9;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+    -fx-border-width: 1;
+}
+.tab {
+    -fx-background-color: transparent;
+    -fx-padding: 7 16 7 16;
+    -fx-font-size: 13px;
+}
+.tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #2563EB transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+}
+.tab .tab-label {
+    -fx-text-fill: #6B7280;
+}
+.tab:selected .tab-label {
+    -fx-text-fill: #2563EB;
+    -fx-font-weight: bold;
+}
+
+/* ---- Admin form area ---- */
+.form-area {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 8;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+}
+
+/* ---- Hyperlinks ---- */
+.hyperlink {
+    -fx-text-fill: #2563EB;
+    -fx-border-color: transparent;
+    -fx-font-size: 12.5px;
+}
+.hyperlink:hover {
+    -fx-text-fill: #1D4ED8;
+    -fx-underline: true;
+}
+
+/* ---- Alerts / Dialogs ---- */
+.dialog-pane {
+    -fx-background-color: white;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #F9FAFB;
+}
+
+/* ---- Scroll Pane ---- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ---- Radio Buttons (checkout) ---- */
+.radio-button {
+    -fx-font-size: 13px;
+    -fx-text-fill: #374151;
+}
+.radio-button:selected .radio {
+    -fx-background-color: #2563EB;
+}

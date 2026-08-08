@@ -34,6 +34,10 @@ public class Customer extends User {
         cart.addItem(product, qty);
     }
 
+    public void addToCart(Product product, int qty, String size) {
+        cart.addItem(product, qty, size);
+    }
+
     public List<Order> getOrderHistory() { return orderHistory; }
 
     public void addOrderToHistory(Order order) { orderHistory.add(order); }

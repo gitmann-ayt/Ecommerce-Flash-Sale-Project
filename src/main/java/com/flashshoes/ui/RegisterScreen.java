@@ -2,42 +2,57 @@ package com.flashshoes.ui;
 
 import com.flashshoes.model.Customer;
 import com.flashshoes.service.DataStore;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
-public class RegisterScreen extends VBox {
+public class RegisterScreen extends StackPane {
 
     public RegisterScreen() {
-        setSpacing(12);
-        setPadding(new Insets(40));
-        setAlignment(Pos.CENTER);
+        setStyle("-fx-background-color: #F0F4F8;");
 
+        VBox card = new VBox(13);
+        card.getStyleClass().add("auth-card");
+        card.setMaxWidth(340);
+        card.setAlignment(Pos.CENTER_LEFT);
+
+        Label logo = new Label("👟");
+        logo.setFont(Font.font(28));
         Label title = new Label("Create your account");
-        title.setFont(Font.font("System", FontWeight.BOLD, 22));
+        title.getStyleClass().add("auth-title");
+        title.setStyle("-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E3A5F;");
+        HBox titleRow = new HBox(8, logo, title);
+        titleRow.setAlignment(Pos.CENTER_LEFT);
 
+        Separator sep = new Separator();
+
+        Label nameLbl = new Label("Full name");
+        nameLbl.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #374151;");
         TextField nameField = new TextField();
-        nameField.setPromptText("Full name");
-        nameField.setMaxWidth(280);
+        nameField.setPromptText("John Doe");
+        nameField.setMaxWidth(Double.MAX_VALUE);
 
+        Label emailLbl = new Label("Email");
+        emailLbl.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #374151;");
         TextField emailField = new TextField();
-        emailField.setPromptText("Email");
-        emailField.setMaxWidth(280);
+        emailField.setPromptText("you@example.com");
+        emailField.setMaxWidth(Double.MAX_VALUE);
 
+        Label pwLbl = new Label("Password");
+        pwLbl.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #374151;");
         PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Password");
-        passwordField.setMaxWidth(280);
+        passwordField.setPromptText("••••••••");
+        passwordField.setMaxWidth(Double.MAX_VALUE);
 
         Label errorLabel = new Label();
-        errorLabel.setStyle("-fx-text-fill: #c0392b;");
+        errorLabel.getStyleClass().add("auth-error");
         errorLabel.setWrapText(true);
         errorLabel.setMaxWidth(280);
 
         Button registerBtn = new Button("Create Account");
-        registerBtn.setMaxWidth(280);
+        registerBtn.getStyleClass().add("btn-primary");
+        registerBtn.setMaxWidth(Double.MAX_VALUE);
         registerBtn.setDefaultButton(true);
         registerBtn.setOnAction(e -> {
             String name = nameField.getText().trim();
@@ -53,7 +68,7 @@ public class RegisterScreen extends VBox {
                 return;
             }
             String id = DataStore.getInstance().nextUserId();
-            Customer customer = new Customer(id, name, email, password, 500.0); // starter wallet balance for demo
+            Customer customer = new Customer(id, name, email, password, 500.0);
             DataStore.getInstance().registerCustomer(customer);
             DataStore.getInstance().setCurrentUser(customer);
             MainApp.showCustomerDashboard();
@@ -61,7 +76,17 @@ public class RegisterScreen extends VBox {
 
         Hyperlink backLink = new Hyperlink("Already have an account? Log in");
         backLink.setOnAction(e -> MainApp.showLogin());
+        backLink.setStyle("-fx-padding: 0;");
 
-        getChildren().addAll(title, nameField, emailField, passwordField, errorLabel, registerBtn, backLink);
+        card.getChildren().addAll(
+                titleRow, sep,
+                nameLbl, nameField,
+                emailLbl, emailField,
+                pwLbl, passwordField,
+                errorLabel, registerBtn, backLink
+        );
+
+        setAlignment(card, Pos.CENTER);
+        getChildren().add(card);
     }
 }

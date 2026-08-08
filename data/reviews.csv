@@ -1,0 +1,859 @@
+reviewId,productId,reviewerName,rating,comment,date
+R1,P36061,Mahnoor I.,5,"Exactly as described, fast to get used to and looks great.",2026-04-11
+R2,P36061,Omar F.,5,"Good value, matched the photos well.",2026-03-27
+R3,P50190,Talha Z.,4,Really happy with this — looks even better in person.,2026-06-05
+R4,P50190,Ayesha K.,5,"Good value, matched the photos well.",2026-04-15
+R5,P8957,Talha Z.,3,"Nice look, material could be a bit better for the price.",2026-08-05
+R6,P8957,Sana J.,4,"Great quality for the price, fits true to size.",2026-02-28
+R7,P8957,Ayesha K.,3,"Good product overall, delivery took a bit long.",2026-07-08
+R8,P8957,Talha Z.,3,"Good product overall, delivery took a bit long.",2026-07-28
+R9,P3896,Omar F.,2,"Nice look, material could be a bit better for the price.",2026-06-16
+R10,P3896,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-03-29
+R11,P57969,Rimsha L.,5,"Good value, matched the photos well.",2026-05-10
+R12,P57969,Omar F.,5,"Comfortable and stylish, would buy again.",2026-02-20
+R13,P22538,Fatima A.,3,"Good product overall, delivery took a bit long.",2026-03-02
+R14,P22538,Ayesha K.,4,"Good value, matched the photos well.",2026-07-24
+R15,P10031,Ali H.,5,"Exactly as described, fast to get used to and looks great.",2026-03-19
+R16,P10031,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-06-03
+R17,P10031,Talha Z.,4,"Great quality for the price, fits true to size.",2026-04-20
+R18,P15922,Mahnoor I.,5,"Good value, matched the photos well.",2026-04-01
+R19,P15922,Hira W.,3,"Good product overall, delivery took a bit long.",2026-07-28
+R20,P15922,Ayesha K.,2,"Nice look, material could be a bit better for the price.",2026-06-13
+R21,P15922,Bilal R.,5,Really happy with this — looks even better in person.,2026-02-28
+R22,P15922,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-04-18
+R23,P15922,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-06-29
+R24,P33068,Danish Q.,4,"Great quality for the price, fits true to size.",2026-07-07
+R25,P33068,Sana J.,5,"Great quality for the price, fits true to size.",2026-07-05
+R26,P33068,Usman S.,5,Really happy with this — looks even better in person.,2026-08-02
+R27,P33068,Danish Q.,3,"Good product overall, delivery took a bit long.",2026-04-27
+R28,P33068,Ayesha K.,5,"Great quality for the price, fits true to size.",2026-06-06
+R29,P33068,Danish Q.,5,"Good value, matched the photos well.",2026-07-08
+R30,P37259,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-06-22
+R31,P37259,Hamza T.,5,Really happy with this — looks even better in person.,2026-08-01
+R32,P37259,Zainab N.,5,"Good value, matched the photos well.",2026-05-08
+R33,P37259,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-08-06
+R34,P20349,Fatima A.,5,"Great quality for the price, fits true to size.",2026-02-18
+R35,P20349,Fatima A.,4,"Exactly as described, fast to get used to and looks great.",2026-03-28
+R36,P20349,Hamza T.,3,"Decent, but sizing ran a little small for me.",2026-05-22
+R37,P20349,Ali H.,4,"Great quality for the price, fits true to size.",2026-03-15
+R38,P52323,Omar F.,3,"Good product overall, delivery took a bit long.",2026-05-23
+R39,P52323,Danish Q.,4,Really happy with this — looks even better in person.,2026-03-28
+R40,P25627,Rimsha L.,4,"Exactly as described, fast to get used to and looks great.",2026-03-07
+R41,P25627,Fatima A.,3,"Nice look, material could be a bit better for the price.",2026-03-26
+R42,P25627,Hira W.,5,"Comfortable and stylish, would buy again.",2026-02-25
+R43,P25627,Sara M.,5,"Great quality for the price, fits true to size.",2026-05-04
+R44,P25627,Zainab N.,4,"Exactly as described, fast to get used to and looks great.",2026-07-01
+R45,P27406,Fatima A.,3,"Good product overall, delivery took a bit long.",2026-05-29
+R46,P27406,Hira W.,4,"Great quality for the price, fits true to size.",2026-03-31
+R47,P27406,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-05-06
+R48,P27406,Sara M.,4,"Good value, matched the photos well.",2026-03-26
+R49,P27406,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-03-09
+R50,P27406,Faisal B.,5,"Good value, matched the photos well.",2026-07-07
+R51,P34887,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-06-01
+R52,P34887,Omar F.,5,"Comfortable and stylish, would buy again.",2026-08-04
+R53,P34887,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-03-11
+R54,P34887,Fatima A.,3,"Good product overall, delivery took a bit long.",2026-07-31
+R55,P34887,Omar F.,4,"Comfortable and stylish, would buy again.",2026-04-25
+R56,P34887,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-08-01
+R57,P25792,Danish Q.,4,"Comfortable and stylish, would buy again.",2026-05-11
+R58,P25792,Hira W.,4,Really happy with this — looks even better in person.,2026-05-05
+R59,P25792,Fatima A.,4,"Great quality for the price, fits true to size.",2026-07-23
+R60,P25792,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-04-17
+R61,P25792,Talha Z.,5,"Exactly as described, fast to get used to and looks great.",2026-02-28
+R62,P17382,Danish Q.,5,"Good value, matched the photos well.",2026-06-22
+R63,P17382,Zainab N.,5,"Great quality for the price, fits true to size.",2026-07-06
+R64,P17382,Ali H.,4,Really happy with this — looks even better in person.,2026-05-26
+R65,P17382,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-03-03
+R66,P17382,Hira W.,5,"Great quality for the price, fits true to size.",2026-05-27
+R67,P15121,Omar F.,4,"Comfortable and stylish, would buy again.",2026-03-20
+R68,P15121,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-04-11
+R69,P15121,Faisal B.,3,"Decent, but sizing ran a little small for me.",2026-04-18
+R70,P15121,Faisal B.,5,"Good value, matched the photos well.",2026-05-12
+R71,P53498,Ali H.,5,"Comfortable and stylish, would buy again.",2026-05-06
+R72,P53498,Rimsha L.,5,"Great quality for the price, fits true to size.",2026-06-25
+R73,P53498,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-03-01
+R74,P53498,Fatima A.,5,"Great quality for the price, fits true to size.",2026-06-29
+R75,P53498,Danish Q.,4,"Exactly as described, fast to get used to and looks great.",2026-04-28
+R76,P50513,Hamza T.,3,"Good product overall, delivery took a bit long.",2026-05-05
+R77,P50513,Hamza T.,4,Really happy with this — looks even better in person.,2026-05-29
+R78,P50513,Hira W.,4,"Great quality for the price, fits true to size.",2026-07-24
+R79,P54536,Ali H.,2,"Good product overall, delivery took a bit long.",2026-03-18
+R80,P54536,Hira W.,4,"Comfortable and stylish, would buy again.",2026-05-08
+R81,P54536,Usman S.,3,"Good product overall, delivery took a bit long.",2026-04-18
+R82,P54536,Zainab N.,2,"Good product overall, delivery took a bit long.",2026-03-18
+R83,P41698,Faisal B.,5,"Exactly as described, fast to get used to and looks great.",2026-02-09
+R84,P41698,Danish Q.,5,"Great quality for the price, fits true to size.",2026-03-17
+R85,P41698,Sara M.,4,"Comfortable and stylish, would buy again.",2026-03-12
+R86,P35001,Zainab N.,4,"Great quality for the price, fits true to size.",2026-05-24
+R87,P35001,Hira W.,5,"Great quality for the price, fits true to size.",2026-05-05
+R88,P48946,Rimsha L.,4,Really happy with this — looks even better in person.,2026-07-15
+R89,P48946,Sana J.,4,Really happy with this — looks even better in person.,2026-04-29
+R90,P48946,Ali H.,3,"Nice look, material could be a bit better for the price.",2026-02-14
+R91,P48946,Faisal B.,3,"Nice look, material could be a bit better for the price.",2026-02-14
+R92,P48946,Danish Q.,5,"Good value, matched the photos well.",2026-03-28
+R93,P22649,Danish Q.,2,"Decent, but sizing ran a little small for me.",2026-05-05
+R94,P22649,Sara M.,4,"Good value, matched the photos well.",2026-06-18
+R95,P37894,Bilal R.,5,Really happy with this — looks even better in person.,2026-06-24
+R96,P37894,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-07-26
+R97,P19484,Faisal B.,4,Really happy with this — looks even better in person.,2026-06-13
+R98,P19484,Usman S.,5,"Good value, matched the photos well.",2026-07-28
+R99,P19484,Ali H.,3,"Nice look, material could be a bit better for the price.",2026-02-17
+R100,P19484,Usman S.,4,"Exactly as described, fast to get used to and looks great.",2026-03-28
+R101,P19484,Zainab N.,3,"Decent, but sizing ran a little small for me.",2026-03-17
+R102,P19484,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-04-14
+R103,P35888,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-04-26
+R104,P35888,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-07-04
+R105,P35888,Sara M.,4,"Comfortable and stylish, would buy again.",2026-03-29
+R106,P35888,Faisal B.,5,Really happy with this — looks even better in person.,2026-04-26
+R107,P35888,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-06-30
+R108,P30831,Rimsha L.,5,"Great quality for the price, fits true to size.",2026-06-03
+R109,P30831,Usman S.,4,Really happy with this — looks even better in person.,2026-02-13
+R110,P30831,Faisal B.,4,"Good value, matched the photos well.",2026-04-18
+R111,P30831,Hira W.,5,"Good value, matched the photos well.",2026-02-22
+R112,P42831,Rimsha L.,5,"Good value, matched the photos well.",2026-04-08
+R113,P42831,Usman S.,3,"Good product overall, delivery took a bit long.",2026-05-30
+R114,P42831,Sara M.,5,"Good value, matched the photos well.",2026-04-15
+R115,P42831,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-05-01
+R116,P42831,Hira W.,2,"Nice look, material could be a bit better for the price.",2026-03-03
+R117,P42831,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-05-15
+R118,P31880,Mahnoor I.,5,Really happy with this — looks even better in person.,2026-06-18
+R119,P31880,Sana J.,5,Really happy with this — looks even better in person.,2026-02-28
+R120,P31880,Sana J.,4,"Good value, matched the photos well.",2026-08-05
+R121,P31880,Sana J.,5,"Good value, matched the photos well.",2026-04-30
+R122,P31880,Hamza T.,5,"Good value, matched the photos well.",2026-07-22
+R123,P19913,Fatima A.,5,Really happy with this — looks even better in person.,2026-03-13
+R124,P19913,Sana J.,5,Really happy with this — looks even better in person.,2026-05-31
+R125,P19913,Bilal R.,4,Really happy with this — looks even better in person.,2026-06-21
+R126,P19913,Talha Z.,5,Really happy with this — looks even better in person.,2026-06-10
+R127,P19913,Sana J.,4,"Comfortable and stylish, would buy again.",2026-07-25
+R128,P19913,Faisal B.,4,"Great quality for the price, fits true to size.",2026-06-16
+R129,P59591,Hira W.,3,"Nice look, material could be a bit better for the price.",2026-03-27
+R130,P59591,Mahnoor I.,4,Really happy with this — looks even better in person.,2026-07-25
+R131,P59591,Sana J.,4,"Comfortable and stylish, would buy again.",2026-03-11
+R132,P59591,Rimsha L.,4,"Comfortable and stylish, would buy again.",2026-02-16
+R133,P59591,Sana J.,4,"Comfortable and stylish, would buy again.",2026-04-12
+R134,P52484,Hira W.,4,"Great quality for the price, fits true to size.",2026-05-09
+R135,P52484,Talha Z.,5,Really happy with this — looks even better in person.,2026-04-28
+R136,P52484,Mahnoor I.,4,"Comfortable and stylish, would buy again.",2026-02-25
+R137,P52484,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-06-14
+R138,P52484,Bilal R.,3,"Decent, but sizing ran a little small for me.",2026-04-10
+R139,P52484,Faisal B.,5,"Great quality for the price, fits true to size.",2026-06-03
+R140,P59730,Usman S.,5,"Comfortable and stylish, would buy again.",2026-06-04
+R141,P59730,Sara M.,5,"Comfortable and stylish, would buy again.",2026-06-30
+R142,P59730,Rimsha L.,2,"Nice look, material could be a bit better for the price.",2026-04-19
+R143,P59730,Fatima A.,5,"Great quality for the price, fits true to size.",2026-05-05
+R144,P24481,Sara M.,5,"Great quality for the price, fits true to size.",2026-02-27
+R145,P24481,Ayesha K.,4,"Good value, matched the photos well.",2026-05-11
+R146,P11324,Ali H.,5,"Great quality for the price, fits true to size.",2026-06-08
+R147,P11324,Bilal R.,5,"Good value, matched the photos well.",2026-05-18
+R148,P11324,Usman S.,4,"Comfortable and stylish, would buy again.",2026-06-20
+R149,P11324,Talha Z.,3,"Nice look, material could be a bit better for the price.",2026-03-16
+R150,P58548,Talha Z.,5,Really happy with this — looks even better in person.,2026-06-21
+R151,P58548,Fatima A.,4,"Great quality for the price, fits true to size.",2026-05-28
+R152,P58548,Ayesha K.,5,"Good value, matched the photos well.",2026-07-14
+R153,P58548,Sara M.,5,"Good value, matched the photos well.",2026-03-03
+R154,P58548,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-07-27
+R155,P6845,Mahnoor I.,5,"Good value, matched the photos well.",2026-07-18
+R156,P6845,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-03-12
+R157,P6845,Hira W.,5,"Good value, matched the photos well.",2026-08-02
+R158,P6845,Usman S.,3,"Good product overall, delivery took a bit long.",2026-08-03
+R159,P37527,Hamza T.,4,"Exactly as described, fast to get used to and looks great.",2026-07-14
+R160,P37527,Zainab N.,3,"Decent, but sizing ran a little small for me.",2026-05-18
+R161,P37527,Talha Z.,5,"Great quality for the price, fits true to size.",2026-02-28
+R162,P37527,Ali H.,4,"Comfortable and stylish, would buy again.",2026-07-07
+R163,P59128,Fatima A.,5,"Great quality for the price, fits true to size.",2026-03-08
+R164,P59128,Sana J.,3,"Decent, but sizing ran a little small for me.",2026-07-11
+R165,P51981,Zainab N.,4,"Comfortable and stylish, would buy again.",2026-05-13
+R166,P51981,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-05-27
+R167,P51981,Omar F.,5,Really happy with this — looks even better in person.,2026-07-27
+R168,P51981,Rimsha L.,5,"Good value, matched the photos well.",2026-07-06
+R169,P51981,Faisal B.,5,"Great quality for the price, fits true to size.",2026-06-23
+R170,P51981,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-04-28
+R171,P41267,Faisal B.,5,"Exactly as described, fast to get used to and looks great.",2026-07-16
+R172,P41267,Ayesha K.,2,"Good product overall, delivery took a bit long.",2026-03-30
+R173,P41267,Rimsha L.,5,Really happy with this — looks even better in person.,2026-06-04
+R174,P52504,Rimsha L.,5,Really happy with this — looks even better in person.,2026-04-22
+R175,P52504,Ali H.,3,"Decent, but sizing ran a little small for me.",2026-02-16
+R176,P52504,Fatima A.,5,"Exactly as described, fast to get used to and looks great.",2026-07-24
+R177,P52504,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-07-10
+R178,P31934,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-02-13
+R179,P31934,Ayesha K.,4,"Great quality for the price, fits true to size.",2026-04-20
+R180,P3489,Usman S.,4,"Great quality for the price, fits true to size.",2026-07-20
+R181,P3489,Sana J.,5,"Good value, matched the photos well.",2026-07-15
+R182,P3489,Usman S.,4,"Good value, matched the photos well.",2026-06-17
+R183,P3489,Ali H.,2,"Good product overall, delivery took a bit long.",2026-06-20
+R184,P30903,Omar F.,5,"Comfortable and stylish, would buy again.",2026-05-30
+R185,P30903,Faisal B.,4,"Comfortable and stylish, would buy again.",2026-07-18
+R186,P30903,Omar F.,5,"Great quality for the price, fits true to size.",2026-04-16
+R187,P13706,Ali H.,5,"Great quality for the price, fits true to size.",2026-03-25
+R188,P13706,Sana J.,5,"Comfortable and stylish, would buy again.",2026-06-23
+R189,P13706,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-03-25
+R190,P25757,Fatima A.,4,"Good value, matched the photos well.",2026-08-01
+R191,P25757,Sara M.,4,"Comfortable and stylish, would buy again.",2026-07-21
+R192,P25757,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-03-21
+R193,P25757,Ali H.,4,"Great quality for the price, fits true to size.",2026-07-26
+R194,P59583,Ali H.,5,"Comfortable and stylish, would buy again.",2026-06-05
+R195,P59583,Ayesha K.,2,"Decent, but sizing ran a little small for me.",2026-06-08
+R196,P59583,Omar F.,5,"Comfortable and stylish, would buy again.",2026-02-09
+R197,P59555,Omar F.,4,"Great quality for the price, fits true to size.",2026-08-07
+R198,P59555,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-06-09
+R199,P59555,Fatima A.,3,"Decent, but sizing ran a little small for me.",2026-02-25
+R200,P52500,Rimsha L.,4,"Great quality for the price, fits true to size.",2026-05-30
+R201,P52500,Usman S.,5,Really happy with this — looks even better in person.,2026-05-12
+R202,P7793,Talha Z.,3,"Decent, but sizing ran a little small for me.",2026-06-14
+R203,P7793,Sana J.,5,"Good value, matched the photos well.",2026-05-04
+R204,P7793,Rimsha L.,4,"Exactly as described, fast to get used to and looks great.",2026-05-03
+R205,P7793,Hamza T.,5,"Comfortable and stylish, would buy again.",2026-03-06
+R206,P7793,Ali H.,4,Really happy with this — looks even better in person.,2026-02-12
+R207,P7793,Danish Q.,5,"Great quality for the price, fits true to size.",2026-07-24
+R208,P41027,Sana J.,3,"Nice look, material could be a bit better for the price.",2026-07-17
+R209,P41027,Ali H.,4,"Good value, matched the photos well.",2026-06-20
+R210,P41027,Zainab N.,4,"Great quality for the price, fits true to size.",2026-04-05
+R211,P41027,Talha Z.,2,"Good product overall, delivery took a bit long.",2026-05-26
+R212,P2247,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-05-23
+R213,P2247,Fatima A.,5,"Comfortable and stylish, would buy again.",2026-05-09
+R214,P34054,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-04-10
+R215,P34054,Ayesha K.,4,"Exactly as described, fast to get used to and looks great.",2026-05-05
+R216,P34054,Ayesha K.,4,"Exactly as described, fast to get used to and looks great.",2026-06-22
+R217,P34054,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-04-21
+R218,P37551,Usman S.,4,"Good value, matched the photos well.",2026-02-19
+R219,P37551,Sana J.,5,Really happy with this — looks even better in person.,2026-02-27
+R220,P37551,Faisal B.,4,"Great quality for the price, fits true to size.",2026-07-07
+R221,P19024,Ayesha K.,3,"Decent, but sizing ran a little small for me.",2026-07-08
+R222,P19024,Ayesha K.,2,"Decent, but sizing ran a little small for me.",2026-04-18
+R223,P19024,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-03-10
+R224,P19024,Sara M.,3,"Decent, but sizing ran a little small for me.",2026-03-18
+R225,P19024,Zainab N.,4,"Great quality for the price, fits true to size.",2026-07-26
+R226,P19024,Sana J.,2,"Good product overall, delivery took a bit long.",2026-02-12
+R227,P45576,Rimsha L.,4,"Comfortable and stylish, would buy again.",2026-02-17
+R228,P45576,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-04-03
+R229,P45576,Fatima A.,5,"Good value, matched the photos well.",2026-04-11
+R230,P32173,Hira W.,4,"Great quality for the price, fits true to size.",2026-07-12
+R231,P32173,Omar F.,5,"Good value, matched the photos well.",2026-04-27
+R232,P32173,Zainab N.,5,"Exactly as described, fast to get used to and looks great.",2026-04-14
+R233,P32173,Sana J.,4,"Good value, matched the photos well.",2026-05-07
+R234,P32173,Hamza T.,4,"Good value, matched the photos well.",2026-02-13
+R235,P47464,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-07-29
+R236,P47464,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-06-16
+R237,P47464,Rimsha L.,5,"Good value, matched the photos well.",2026-02-19
+R238,P47464,Usman S.,4,"Good value, matched the photos well.",2026-02-17
+R239,P47464,Danish Q.,5,"Great quality for the price, fits true to size.",2026-04-03
+R240,P47464,Faisal B.,5,"Exactly as described, fast to get used to and looks great.",2026-05-31
+R241,P58526,Fatima A.,5,"Good value, matched the photos well.",2026-07-08
+R242,P58526,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-04-02
+R243,P58526,Rimsha L.,4,"Comfortable and stylish, would buy again.",2026-04-02
+R244,P58526,Hira W.,4,"Comfortable and stylish, would buy again.",2026-03-03
+R245,P58526,Ali H.,4,"Comfortable and stylish, would buy again.",2026-06-13
+R246,P38447,Talha Z.,5,"Good value, matched the photos well.",2026-03-09
+R247,P38447,Fatima A.,4,Really happy with this — looks even better in person.,2026-05-10
+R248,P38447,Zainab N.,4,"Great quality for the price, fits true to size.",2026-03-04
+R249,P38447,Faisal B.,5,"Exactly as described, fast to get used to and looks great.",2026-06-03
+R250,P25373,Hamza T.,5,"Exactly as described, fast to get used to and looks great.",2026-04-04
+R251,P25373,Zainab N.,4,"Good value, matched the photos well.",2026-04-22
+R252,P25373,Bilal R.,5,Really happy with this — looks even better in person.,2026-02-15
+R253,P25373,Talha Z.,5,"Great quality for the price, fits true to size.",2026-06-06
+R254,P25373,Sana J.,4,"Great quality for the price, fits true to size.",2026-05-17
+R255,P25373,Danish Q.,4,"Good value, matched the photos well.",2026-04-07
+R256,P56240,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-06-23
+R257,P56240,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-07-04
+R258,P56240,Talha Z.,4,"Exactly as described, fast to get used to and looks great.",2026-06-04
+R259,P41332,Usman S.,5,Really happy with this — looks even better in person.,2026-03-18
+R260,P41332,Omar F.,5,"Good value, matched the photos well.",2026-06-18
+R261,P41332,Ali H.,4,"Great quality for the price, fits true to size.",2026-04-14
+R262,P41332,Fatima A.,4,Really happy with this — looks even better in person.,2026-07-06
+R263,P41332,Rimsha L.,4,"Great quality for the price, fits true to size.",2026-04-17
+R264,P41332,Ali H.,4,"Comfortable and stylish, would buy again.",2026-08-05
+R265,P59581,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-05-04
+R266,P59581,Talha Z.,5,"Exactly as described, fast to get used to and looks great.",2026-02-11
+R267,P59581,Rimsha L.,4,"Good value, matched the photos well.",2026-07-18
+R268,P59581,Omar F.,5,"Great quality for the price, fits true to size.",2026-07-06
+R269,P59581,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-06-16
+R270,P59581,Hira W.,5,"Great quality for the price, fits true to size.",2026-07-21
+R271,P32801,Rimsha L.,5,"Good value, matched the photos well.",2026-07-02
+R272,P32801,Bilal R.,5,"Good value, matched the photos well.",2026-05-30
+R273,P32801,Danish Q.,4,Really happy with this — looks even better in person.,2026-05-02
+R274,P32801,Usman S.,4,"Comfortable and stylish, would buy again.",2026-04-23
+R275,P32801,Zainab N.,3,"Good product overall, delivery took a bit long.",2026-06-18
+R276,P22175,Rimsha L.,5,"Good value, matched the photos well.",2026-05-03
+R277,P22175,Hira W.,2,"Nice look, material could be a bit better for the price.",2026-03-23
+R278,P22175,Mahnoor I.,5,"Exactly as described, fast to get used to and looks great.",2026-03-14
+R279,P22175,Mahnoor I.,5,"Good value, matched the photos well.",2026-02-24
+R280,P22175,Sara M.,5,"Great quality for the price, fits true to size.",2026-07-23
+R281,P22175,Talha Z.,5,Really happy with this — looks even better in person.,2026-04-05
+R282,P20051,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-05-28
+R283,P20051,Sara M.,5,"Great quality for the price, fits true to size.",2026-07-11
+R284,P20051,Hamza T.,4,"Good value, matched the photos well.",2026-04-23
+R285,P20051,Ali H.,5,Really happy with this — looks even better in person.,2026-02-28
+R286,P48185,Omar F.,5,"Comfortable and stylish, would buy again.",2026-06-15
+R287,P48185,Sara M.,4,"Great quality for the price, fits true to size.",2026-07-13
+R288,P48185,Zainab N.,5,"Exactly as described, fast to get used to and looks great.",2026-07-29
+R289,P48185,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-04-28
+R290,P53357,Usman S.,3,"Good product overall, delivery took a bit long.",2026-05-26
+R291,P53357,Hira W.,5,"Comfortable and stylish, would buy again.",2026-05-14
+R292,P36369,Usman S.,5,Really happy with this — looks even better in person.,2026-08-07
+R293,P36369,Mahnoor I.,2,"Decent, but sizing ran a little small for me.",2026-05-12
+R294,P36369,Usman S.,4,"Good value, matched the photos well.",2026-02-10
+R295,P36369,Omar F.,5,Really happy with this — looks even better in person.,2026-03-15
+R296,P57811,Ali H.,4,"Great quality for the price, fits true to size.",2026-04-16
+R297,P57811,Sana J.,4,Really happy with this — looks even better in person.,2026-05-29
+R298,P54125,Mahnoor I.,3,"Nice look, material could be a bit better for the price.",2026-05-12
+R299,P54125,Bilal R.,4,"Great quality for the price, fits true to size.",2026-02-19
+R300,P54125,Sara M.,5,Really happy with this — looks even better in person.,2026-03-14
+R301,P54125,Hamza T.,5,"Good value, matched the photos well.",2026-05-08
+R302,P54125,Sara M.,5,"Comfortable and stylish, would buy again.",2026-07-04
+R303,P47413,Ayesha K.,4,"Great quality for the price, fits true to size.",2026-06-23
+R304,P47413,Hamza T.,3,"Decent, but sizing ran a little small for me.",2026-05-25
+R305,P47413,Sana J.,4,"Exactly as described, fast to get used to and looks great.",2026-07-21
+R306,P47413,Faisal B.,4,"Good value, matched the photos well.",2026-05-13
+R307,P43784,Hira W.,4,"Great quality for the price, fits true to size.",2026-03-25
+R308,P43784,Zainab N.,5,Really happy with this — looks even better in person.,2026-06-13
+R309,P43784,Fatima A.,5,"Comfortable and stylish, would buy again.",2026-08-04
+R310,P43784,Hira W.,4,"Good value, matched the photos well.",2026-07-21
+R311,P1596,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-03-19
+R312,P1596,Danish Q.,5,"Good value, matched the photos well.",2026-07-13
+R313,P1596,Bilal R.,4,"Good value, matched the photos well.",2026-06-25
+R314,P1596,Usman S.,4,Really happy with this — looks even better in person.,2026-05-22
+R315,P1596,Hamza T.,5,"Good value, matched the photos well.",2026-07-09
+R316,P36086,Mahnoor I.,5,"Good value, matched the photos well.",2026-03-05
+R317,P36086,Omar F.,4,"Comfortable and stylish, would buy again.",2026-07-10
+R318,P36086,Danish Q.,5,"Great quality for the price, fits true to size.",2026-06-13
+R319,P36086,Zainab N.,4,"Exactly as described, fast to get used to and looks great.",2026-03-13
+R320,P28783,Hira W.,5,Really happy with this — looks even better in person.,2026-04-24
+R321,P28783,Ayesha K.,5,"Great quality for the price, fits true to size.",2026-06-27
+R322,P28783,Fatima A.,5,"Comfortable and stylish, would buy again.",2026-07-28
+R323,P28783,Omar F.,5,"Good value, matched the photos well.",2026-02-23
+R324,P28783,Sana J.,4,"Exactly as described, fast to get used to and looks great.",2026-03-02
+R325,P28783,Sara M.,5,"Good value, matched the photos well.",2026-05-23
+R326,P27423,Hamza T.,5,Really happy with this — looks even better in person.,2026-03-07
+R327,P27423,Hira W.,5,"Exactly as described, fast to get used to and looks great.",2026-04-12
+R328,P27423,Omar F.,3,"Decent, but sizing ran a little small for me.",2026-04-23
+R329,P27423,Hamza T.,2,"Nice look, material could be a bit better for the price.",2026-02-25
+R330,P27423,Fatima A.,2,"Good product overall, delivery took a bit long.",2026-06-20
+R331,P27423,Ayesha K.,4,"Good value, matched the photos well.",2026-02-21
+R332,P39614,Hira W.,5,"Great quality for the price, fits true to size.",2026-03-28
+R333,P39614,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-07-12
+R334,P40178,Ali H.,3,"Nice look, material could be a bit better for the price.",2026-06-25
+R335,P40178,Ayesha K.,5,"Good value, matched the photos well.",2026-06-04
+R336,P40178,Sana J.,4,Really happy with this — looks even better in person.,2026-06-04
+R337,P40178,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-04-07
+R338,P40178,Fatima A.,4,Really happy with this — looks even better in person.,2026-08-05
+R339,P16929,Ali H.,5,"Comfortable and stylish, would buy again.",2026-06-28
+R340,P16929,Rimsha L.,4,"Exactly as described, fast to get used to and looks great.",2026-07-28
+R341,P16929,Fatima A.,4,"Great quality for the price, fits true to size.",2026-05-20
+R342,P16929,Talha Z.,4,Really happy with this — looks even better in person.,2026-02-22
+R343,P48384,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-05-22
+R344,P48384,Talha Z.,2,"Nice look, material could be a bit better for the price.",2026-04-02
+R345,P48384,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-07-28
+R346,P48384,Bilal R.,4,Really happy with this — looks even better in person.,2026-05-25
+R347,P48384,Bilal R.,5,Really happy with this — looks even better in person.,2026-02-10
+R348,P37562,Talha Z.,3,"Decent, but sizing ran a little small for me.",2026-02-12
+R349,P37562,Rimsha L.,2,"Decent, but sizing ran a little small for me.",2026-05-27
+R350,P37562,Mahnoor I.,3,"Decent, but sizing ran a little small for me.",2026-05-11
+R351,P37562,Sara M.,5,"Comfortable and stylish, would buy again.",2026-05-25
+R352,P43230,Zainab N.,4,"Good value, matched the photos well.",2026-03-09
+R353,P43230,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-04-18
+R354,P43230,Usman S.,4,"Comfortable and stylish, would buy again.",2026-02-09
+R355,P43230,Usman S.,5,"Great quality for the price, fits true to size.",2026-03-19
+R356,P43230,Zainab N.,4,"Good value, matched the photos well.",2026-03-13
+R357,P44686,Faisal B.,4,Really happy with this — looks even better in person.,2026-04-12
+R358,P44686,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-07-28
+R359,P44686,Rimsha L.,5,Really happy with this — looks even better in person.,2026-05-09
+R360,P44686,Danish Q.,4,Really happy with this — looks even better in person.,2026-07-18
+R361,P44686,Faisal B.,4,"Great quality for the price, fits true to size.",2026-07-18
+R362,P37266,Zainab N.,4,"Great quality for the price, fits true to size.",2026-02-22
+R363,P37266,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-04-10
+R364,P37266,Ayesha K.,5,"Exactly as described, fast to get used to and looks great.",2026-02-21
+R365,P37266,Omar F.,4,"Comfortable and stylish, would buy again.",2026-08-06
+R366,P37266,Sana J.,4,"Good value, matched the photos well.",2026-03-04
+R367,P37266,Sana J.,5,"Comfortable and stylish, would buy again.",2026-04-13
+R368,P52044,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-07-06
+R369,P52044,Danish Q.,5,"Great quality for the price, fits true to size.",2026-05-16
+R370,P52044,Mahnoor I.,5,"Comfortable and stylish, would buy again.",2026-03-19
+R371,P52044,Usman S.,4,"Comfortable and stylish, would buy again.",2026-06-25
+R372,P52044,Hira W.,3,"Nice look, material could be a bit better for the price.",2026-05-14
+R373,P52044,Hira W.,5,Really happy with this — looks even better in person.,2026-07-30
+R374,P38445,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-07-14
+R375,P38445,Hamza T.,5,"Comfortable and stylish, would buy again.",2026-07-10
+R376,P38445,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-04-02
+R377,P38445,Ali H.,5,Really happy with this — looks even better in person.,2026-04-20
+R378,P38445,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-03-06
+R379,P38445,Mahnoor I.,3,"Good product overall, delivery took a bit long.",2026-07-31
+R380,P59672,Fatima A.,4,"Exactly as described, fast to get used to and looks great.",2026-07-02
+R381,P59672,Talha Z.,5,Really happy with this — looks even better in person.,2026-04-22
+R382,P38308,Zainab N.,4,"Exactly as described, fast to get used to and looks great.",2026-07-28
+R383,P38308,Zainab N.,3,"Nice look, material could be a bit better for the price.",2026-06-24
+R384,P38308,Fatima A.,4,"Good value, matched the photos well.",2026-07-10
+R385,P38308,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-07-22
+R386,P38308,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-02-16
+R387,P38308,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-07-03
+R388,P50031,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-05-18
+R389,P50031,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-06-13
+R390,P28289,Hamza T.,5,Really happy with this — looks even better in person.,2026-06-07
+R391,P28289,Sana J.,3,"Nice look, material could be a bit better for the price.",2026-04-01
+R392,P51615,Hira W.,2,"Decent, but sizing ran a little small for me.",2026-04-19
+R393,P51615,Ayesha K.,4,"Good value, matched the photos well.",2026-06-02
+R394,P51615,Ayesha K.,5,"Good value, matched the photos well.",2026-07-14
+R395,P19739,Danish Q.,4,"Comfortable and stylish, would buy again.",2026-03-20
+R396,P19739,Fatima A.,4,"Great quality for the price, fits true to size.",2026-07-27
+R397,P19739,Sara M.,5,Really happy with this — looks even better in person.,2026-05-22
+R398,P31871,Bilal R.,5,"Great quality for the price, fits true to size.",2026-04-15
+R399,P31871,Sara M.,5,"Comfortable and stylish, would buy again.",2026-04-21
+R400,P31871,Rimsha L.,5,"Good value, matched the photos well.",2026-04-09
+R401,P31871,Sara M.,4,Really happy with this — looks even better in person.,2026-06-21
+R402,P48523,Ayesha K.,4,"Good value, matched the photos well.",2026-04-07
+R403,P48523,Mahnoor I.,5,Really happy with this — looks even better in person.,2026-08-02
+R404,P48523,Talha Z.,5,"Comfortable and stylish, would buy again.",2026-02-18
+R405,P48523,Omar F.,5,Really happy with this — looks even better in person.,2026-05-21
+R406,P31193,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-05-07
+R407,P31193,Sana J.,3,"Decent, but sizing ran a little small for me.",2026-05-24
+R408,P31193,Omar F.,5,"Great quality for the price, fits true to size.",2026-02-27
+R409,P58567,Danish Q.,5,Really happy with this — looks even better in person.,2026-05-13
+R410,P58567,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-03-14
+R411,P53095,Fatima A.,5,"Exactly as described, fast to get used to and looks great.",2026-07-01
+R412,P53095,Faisal B.,4,"Good value, matched the photos well.",2026-05-08
+R413,P53095,Sara M.,4,"Exactly as described, fast to get used to and looks great.",2026-07-05
+R414,P30732,Talha Z.,5,"Great quality for the price, fits true to size.",2026-03-27
+R415,P30732,Faisal B.,4,"Exactly as described, fast to get used to and looks great.",2026-04-04
+R416,P30732,Sara M.,4,"Exactly as described, fast to get used to and looks great.",2026-05-05
+R417,P30732,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-04-11
+R418,P30732,Sara M.,5,Really happy with this — looks even better in person.,2026-03-05
+R419,P52003,Rimsha L.,2,"Decent, but sizing ran a little small for me.",2026-03-03
+R420,P52003,Mahnoor I.,4,Really happy with this — looks even better in person.,2026-07-28
+R421,P52003,Mahnoor I.,4,Really happy with this — looks even better in person.,2026-07-29
+R422,P52003,Hira W.,5,"Good value, matched the photos well.",2026-06-04
+R423,P52003,Sara M.,5,"Good value, matched the photos well.",2026-04-25
+R424,P52003,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-06-11
+R425,P28965,Sana J.,4,"Great quality for the price, fits true to size.",2026-04-02
+R426,P28965,Hamza T.,4,"Great quality for the price, fits true to size.",2026-06-05
+R427,P6782,Hira W.,3,"Good product overall, delivery took a bit long.",2026-03-30
+R428,P6782,Hira W.,4,"Good value, matched the photos well.",2026-07-11
+R429,P6782,Bilal R.,5,"Exactly as described, fast to get used to and looks great.",2026-07-03
+R430,P6782,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-05-21
+R431,P52382,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-07-18
+R432,P52382,Hira W.,5,"Exactly as described, fast to get used to and looks great.",2026-06-10
+R433,P52382,Fatima A.,3,"Good product overall, delivery took a bit long.",2026-08-05
+R434,P18903,Zainab N.,4,"Great quality for the price, fits true to size.",2026-05-09
+R435,P18903,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-06-21
+R436,P4594,Ali H.,5,"Comfortable and stylish, would buy again.",2026-05-13
+R437,P4594,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-05-27
+R438,P4594,Faisal B.,4,"Good value, matched the photos well.",2026-03-09
+R439,P4594,Usman S.,4,"Good value, matched the photos well.",2026-03-26
+R440,P54079,Bilal R.,2,"Decent, but sizing ran a little small for me.",2026-07-30
+R441,P54079,Ayesha K.,4,Really happy with this — looks even better in person.,2026-02-15
+R442,P54079,Omar F.,3,"Decent, but sizing ran a little small for me.",2026-03-02
+R443,P5345,Usman S.,4,"Great quality for the price, fits true to size.",2026-07-07
+R444,P5345,Rimsha L.,5,"Great quality for the price, fits true to size.",2026-02-12
+R445,P5345,Ayesha K.,5,"Exactly as described, fast to get used to and looks great.",2026-03-23
+R446,P5345,Ayesha K.,3,"Good product overall, delivery took a bit long.",2026-07-14
+R447,P5345,Faisal B.,2,"Good product overall, delivery took a bit long.",2026-03-19
+R448,P58220,Mahnoor I.,4,"Good value, matched the photos well.",2026-04-22
+R449,P58220,Fatima A.,2,"Decent, but sizing ran a little small for me.",2026-04-19
+R450,P58220,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-04-02
+R451,P58220,Faisal B.,4,"Good value, matched the photos well.",2026-03-20
+R452,P58220,Hamza T.,4,"Great quality for the price, fits true to size.",2026-08-03
+R453,P59731,Ali H.,4,"Great quality for the price, fits true to size.",2026-06-09
+R454,P59731,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-07-26
+R455,P59731,Rimsha L.,4,Really happy with this — looks even better in person.,2026-07-31
+R456,P59731,Faisal B.,5,"Comfortable and stylish, would buy again.",2026-05-03
+R457,P59731,Talha Z.,4,"Good value, matched the photos well.",2026-03-03
+R458,P59731,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-03-07
+R459,P34464,Ali H.,4,"Great quality for the price, fits true to size.",2026-06-02
+R460,P34464,Rimsha L.,4,"Great quality for the price, fits true to size.",2026-04-11
+R461,P34464,Fatima A.,4,"Good value, matched the photos well.",2026-03-09
+R462,P22678,Omar F.,5,"Good value, matched the photos well.",2026-06-27
+R463,P22678,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-03-25
+R464,P22678,Sara M.,5,Really happy with this — looks even better in person.,2026-07-23
+R465,P22678,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-06-06
+R466,P12440,Sana J.,5,"Comfortable and stylish, would buy again.",2026-05-08
+R467,P12440,Hamza T.,3,"Decent, but sizing ran a little small for me.",2026-03-30
+R468,P12440,Sara M.,5,"Comfortable and stylish, would buy again.",2026-03-08
+R469,P30726,Ali H.,5,Really happy with this — looks even better in person.,2026-05-30
+R470,P30726,Zainab N.,3,"Good product overall, delivery took a bit long.",2026-05-30
+R471,P30726,Sana J.,4,Really happy with this — looks even better in person.,2026-05-09
+R472,P30726,Ayesha K.,3,"Good product overall, delivery took a bit long.",2026-05-24
+R473,P30726,Zainab N.,2,"Nice look, material could be a bit better for the price.",2026-05-15
+R474,P41237,Fatima A.,5,"Great quality for the price, fits true to size.",2026-02-22
+R475,P41237,Mahnoor I.,5,"Great quality for the price, fits true to size.",2026-05-13
+R476,P41237,Ayesha K.,5,"Great quality for the price, fits true to size.",2026-07-09
+R477,P41237,Ayesha K.,4,"Great quality for the price, fits true to size.",2026-05-02
+R478,P41237,Zainab N.,4,Really happy with this — looks even better in person.,2026-04-27
+R479,P6835,Usman S.,4,"Comfortable and stylish, would buy again.",2026-07-06
+R480,P6835,Usman S.,5,"Comfortable and stylish, would buy again.",2026-06-01
+R481,P12449,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-02-21
+R482,P12449,Mahnoor I.,4,"Comfortable and stylish, would buy again.",2026-06-17
+R483,P12449,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-04-21
+R484,P12449,Hira W.,5,"Exactly as described, fast to get used to and looks great.",2026-07-11
+R485,P12449,Omar F.,4,"Good value, matched the photos well.",2026-03-14
+R486,P15207,Sara M.,4,"Exactly as described, fast to get used to and looks great.",2026-02-09
+R487,P15207,Zainab N.,4,"Comfortable and stylish, would buy again.",2026-05-19
+R488,P15207,Fatima A.,5,"Comfortable and stylish, would buy again.",2026-03-23
+R489,P15207,Danish Q.,5,Really happy with this — looks even better in person.,2026-02-24
+R490,P36766,Omar F.,4,"Comfortable and stylish, would buy again.",2026-03-04
+R491,P36766,Fatima A.,2,"Decent, but sizing ran a little small for me.",2026-06-19
+R492,P58922,Ali H.,5,"Comfortable and stylish, would buy again.",2026-03-09
+R493,P58922,Zainab N.,3,"Nice look, material could be a bit better for the price.",2026-07-24
+R494,P58922,Hira W.,3,"Nice look, material could be a bit better for the price.",2026-02-28
+R495,P24605,Ayesha K.,4,"Great quality for the price, fits true to size.",2026-05-13
+R496,P24605,Bilal R.,3,"Good product overall, delivery took a bit long.",2026-05-19
+R497,P24605,Sara M.,3,"Nice look, material could be a bit better for the price.",2026-02-18
+R498,P5225,Danish Q.,4,"Exactly as described, fast to get used to and looks great.",2026-06-14
+R499,P5225,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-07-05
+R500,P5225,Talha Z.,5,"Exactly as described, fast to get used to and looks great.",2026-04-03
+R501,P5225,Sana J.,4,"Comfortable and stylish, would buy again.",2026-05-29
+R502,P5225,Bilal R.,5,"Good value, matched the photos well.",2026-06-06
+R503,P5225,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-07-25
+R504,P37518,Fatima A.,5,"Good value, matched the photos well.",2026-03-24
+R505,P37518,Fatima A.,5,"Good value, matched the photos well.",2026-04-18
+R506,P37518,Danish Q.,2,"Nice look, material could be a bit better for the price.",2026-04-12
+R507,P37518,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-04-02
+R508,P37518,Omar F.,4,"Good value, matched the photos well.",2026-05-09
+R509,P8933,Hamza T.,5,"Great quality for the price, fits true to size.",2026-07-03
+R510,P8933,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-08-01
+R511,P8933,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-06-04
+R512,P8933,Bilal R.,4,"Good value, matched the photos well.",2026-04-18
+R513,P8933,Ali H.,5,"Exactly as described, fast to get used to and looks great.",2026-07-23
+R514,P42631,Rimsha L.,3,"Nice look, material could be a bit better for the price.",2026-06-04
+R515,P42631,Sana J.,5,"Good value, matched the photos well.",2026-07-02
+R516,P42631,Hamza T.,2,"Good product overall, delivery took a bit long.",2026-02-17
+R517,P19740,Sana J.,5,"Great quality for the price, fits true to size.",2026-02-13
+R518,P19740,Danish Q.,4,Really happy with this — looks even better in person.,2026-07-05
+R519,P19740,Omar F.,5,Really happy with this — looks even better in person.,2026-02-14
+R520,P19740,Mahnoor I.,5,"Good value, matched the photos well.",2026-03-30
+R521,P19740,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-04-12
+R522,P46177,Sara M.,4,Really happy with this — looks even better in person.,2026-04-20
+R523,P46177,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-03-09
+R524,P46177,Omar F.,4,"Comfortable and stylish, would buy again.",2026-05-13
+R525,P17197,Danish Q.,4,"Comfortable and stylish, would buy again.",2026-03-01
+R526,P17197,Hamza T.,3,"Nice look, material could be a bit better for the price.",2026-03-31
+R527,P17197,Talha Z.,5,Really happy with this — looks even better in person.,2026-07-11
+R528,P17197,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-02-14
+R529,P17197,Ali H.,5,"Great quality for the price, fits true to size.",2026-03-25
+R530,P17197,Mahnoor I.,5,Really happy with this — looks even better in person.,2026-02-14
+R531,P52210,Sana J.,5,"Good value, matched the photos well.",2026-06-15
+R532,P52210,Sana J.,3,"Decent, but sizing ran a little small for me.",2026-04-08
+R533,P17533,Mahnoor I.,4,"Comfortable and stylish, would buy again.",2026-07-31
+R534,P17533,Hira W.,2,"Good product overall, delivery took a bit long.",2026-04-30
+R535,P52524,Sana J.,5,Really happy with this — looks even better in person.,2026-03-19
+R536,P52524,Ayesha K.,5,"Great quality for the price, fits true to size.",2026-07-07
+R537,P52524,Usman S.,5,Really happy with this — looks even better in person.,2026-07-05
+R538,P52524,Hira W.,5,"Comfortable and stylish, would buy again.",2026-02-15
+R539,P42583,Rimsha L.,5,"Good value, matched the photos well.",2026-07-04
+R540,P42583,Talha Z.,4,"Exactly as described, fast to get used to and looks great.",2026-04-04
+R541,P42583,Zainab N.,4,Really happy with this — looks even better in person.,2026-06-16
+R542,P42583,Ali H.,5,"Comfortable and stylish, would buy again.",2026-06-13
+R543,P42583,Fatima A.,3,"Good product overall, delivery took a bit long.",2026-06-19
+R544,P42583,Faisal B.,4,"Good value, matched the photos well.",2026-06-13
+R545,P4611,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-07-08
+R546,P4611,Talha Z.,5,"Exactly as described, fast to get used to and looks great.",2026-08-07
+R547,P4611,Mahnoor I.,5,Really happy with this — looks even better in person.,2026-07-21
+R548,P4611,Sana J.,5,"Comfortable and stylish, would buy again.",2026-02-10
+R549,P4611,Sana J.,2,"Nice look, material could be a bit better for the price.",2026-02-18
+R550,P4611,Talha Z.,2,"Good product overall, delivery took a bit long.",2026-06-13
+R551,P11402,Ali H.,5,"Comfortable and stylish, would buy again.",2026-04-08
+R552,P11402,Usman S.,5,"Great quality for the price, fits true to size.",2026-05-08
+R553,P46060,Sara M.,4,"Good value, matched the photos well.",2026-06-19
+R554,P46060,Danish Q.,4,Really happy with this — looks even better in person.,2026-07-31
+R555,P39644,Rimsha L.,4,Really happy with this — looks even better in person.,2026-06-09
+R556,P39644,Fatima A.,5,Really happy with this — looks even better in person.,2026-07-12
+R557,P7157,Sara M.,4,Really happy with this — looks even better in person.,2026-05-29
+R558,P7157,Bilal R.,4,"Good value, matched the photos well.",2026-05-12
+R559,P7157,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-02-13
+R560,P7157,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-03-05
+R561,P7157,Ayesha K.,4,"Exactly as described, fast to get used to and looks great.",2026-03-21
+R562,P7157,Fatima A.,5,"Great quality for the price, fits true to size.",2026-04-09
+R563,P52501,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-07-17
+R564,P52501,Mahnoor I.,3,"Decent, but sizing ran a little small for me.",2026-03-27
+R565,P52501,Hira W.,5,Really happy with this — looks even better in person.,2026-03-08
+R566,P15461,Ali H.,5,"Great quality for the price, fits true to size.",2026-07-05
+R567,P15461,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-03-02
+R568,P15461,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-04-12
+R569,P15461,Zainab N.,5,"Good value, matched the photos well.",2026-07-31
+R570,P15461,Bilal R.,5,"Great quality for the price, fits true to size.",2026-03-19
+R571,P15461,Omar F.,4,"Great quality for the price, fits true to size.",2026-03-06
+R572,P36710,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-06-25
+R573,P36710,Bilal R.,5,Really happy with this — looks even better in person.,2026-08-01
+R574,P18780,Talha Z.,4,"Good value, matched the photos well.",2026-04-21
+R575,P18780,Talha Z.,4,"Good value, matched the photos well.",2026-02-09
+R576,P18780,Ayesha K.,5,"Good value, matched the photos well.",2026-05-13
+R577,P18780,Omar F.,4,"Good value, matched the photos well.",2026-07-14
+R578,P18780,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-03-02
+R579,P50025,Omar F.,3,"Good product overall, delivery took a bit long.",2026-04-24
+R580,P50025,Usman S.,4,Really happy with this — looks even better in person.,2026-04-15
+R581,P50025,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-07-12
+R582,P14894,Omar F.,4,Really happy with this — looks even better in person.,2026-07-28
+R583,P14894,Mahnoor I.,4,Really happy with this — looks even better in person.,2026-02-22
+R584,P14894,Mahnoor I.,4,"Comfortable and stylish, would buy again.",2026-07-27
+R585,P14894,Talha Z.,3,"Decent, but sizing ran a little small for me.",2026-07-11
+R586,P51332,Zainab N.,5,Really happy with this — looks even better in person.,2026-05-24
+R587,P51332,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-07-11
+R588,P51332,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-04-15
+R589,P51332,Faisal B.,2,"Good product overall, delivery took a bit long.",2026-03-18
+R590,P51332,Hira W.,4,"Comfortable and stylish, would buy again.",2026-03-24
+R591,P9981,Bilal R.,5,"Great quality for the price, fits true to size.",2026-07-16
+R592,P9981,Fatima A.,5,"Exactly as described, fast to get used to and looks great.",2026-04-12
+R593,P9981,Rimsha L.,2,"Good product overall, delivery took a bit long.",2026-07-15
+R594,P9981,Hira W.,4,"Good value, matched the photos well.",2026-04-14
+R595,P9981,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-07-25
+R596,P36057,Faisal B.,5,Really happy with this — looks even better in person.,2026-07-10
+R597,P36057,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-02-15
+R598,P36057,Rimsha L.,3,"Good product overall, delivery took a bit long.",2026-06-05
+R599,P58600,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-08-07
+R600,P58600,Sana J.,5,"Good value, matched the photos well.",2026-06-17
+R601,P58600,Danish Q.,5,"Good value, matched the photos well.",2026-04-15
+R602,P58600,Faisal B.,5,"Good value, matched the photos well.",2026-06-23
+R603,P58600,Bilal R.,3,"Nice look, material could be a bit better for the price.",2026-07-03
+R604,P58600,Usman S.,3,"Decent, but sizing ran a little small for me.",2026-02-17
+R605,P28771,Hamza T.,2,"Good product overall, delivery took a bit long.",2026-04-02
+R606,P28771,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-04-06
+R607,P28771,Ayesha K.,2,"Decent, but sizing ran a little small for me.",2026-06-05
+R608,P28771,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-04-12
+R609,P28771,Ali H.,4,"Great quality for the price, fits true to size.",2026-05-05
+R610,P48763,Sana J.,4,Really happy with this — looks even better in person.,2026-05-12
+R611,P48763,Ayesha K.,5,"Great quality for the price, fits true to size.",2026-03-12
+R612,P48763,Zainab N.,3,"Good product overall, delivery took a bit long.",2026-04-04
+R613,P52410,Zainab N.,4,"Great quality for the price, fits true to size.",2026-02-10
+R614,P52410,Ali H.,5,"Comfortable and stylish, would buy again.",2026-07-20
+R615,P52410,Zainab N.,3,"Good product overall, delivery took a bit long.",2026-05-13
+R616,P52410,Faisal B.,5,"Good value, matched the photos well.",2026-05-17
+R617,P52410,Rimsha L.,4,"Good value, matched the photos well.",2026-05-31
+R618,P50379,Bilal R.,3,"Decent, but sizing ran a little small for me.",2026-04-02
+R619,P50379,Mahnoor I.,5,"Great quality for the price, fits true to size.",2026-04-02
+R620,P50379,Ali H.,3,"Decent, but sizing ran a little small for me.",2026-05-28
+R621,P50379,Bilal R.,5,"Exactly as described, fast to get used to and looks great.",2026-07-30
+R622,P50379,Talha Z.,4,"Good value, matched the photos well.",2026-07-18
+R623,P50382,Sana J.,3,"Good product overall, delivery took a bit long.",2026-06-18
+R624,P50382,Sana J.,4,"Great quality for the price, fits true to size.",2026-02-19
+R625,P50382,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-04-18
+R626,P50382,Talha Z.,3,"Good product overall, delivery took a bit long.",2026-04-07
+R627,P59873,Mahnoor I.,3,"Nice look, material could be a bit better for the price.",2026-05-16
+R628,P59873,Faisal B.,2,"Nice look, material could be a bit better for the price.",2026-04-18
+R629,P59873,Talha Z.,5,Really happy with this — looks even better in person.,2026-05-25
+R630,P59873,Talha Z.,5,"Comfortable and stylish, would buy again.",2026-06-25
+R631,P51334,Sara M.,5,Really happy with this — looks even better in person.,2026-02-28
+R632,P51334,Talha Z.,5,"Good value, matched the photos well.",2026-04-01
+R633,P51334,Usman S.,5,Really happy with this — looks even better in person.,2026-06-02
+R634,P51334,Zainab N.,5,Really happy with this — looks even better in person.,2026-07-04
+R635,P51334,Usman S.,4,"Good value, matched the photos well.",2026-03-11
+R636,P51334,Ayesha K.,5,"Good value, matched the photos well.",2026-08-01
+R637,P39932,Fatima A.,4,"Great quality for the price, fits true to size.",2026-06-14
+R638,P39932,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-05-25
+R639,P39932,Faisal B.,3,"Good product overall, delivery took a bit long.",2026-05-10
+R640,P39932,Danish Q.,4,"Exactly as described, fast to get used to and looks great.",2026-07-20
+R641,P39932,Hamza T.,3,"Nice look, material could be a bit better for the price.",2026-05-31
+R642,P58167,Ayesha K.,4,"Exactly as described, fast to get used to and looks great.",2026-04-30
+R643,P58167,Ali H.,5,"Exactly as described, fast to get used to and looks great.",2026-03-20
+R644,P58167,Omar F.,4,"Great quality for the price, fits true to size.",2026-04-27
+R645,P58167,Rimsha L.,5,"Exactly as described, fast to get used to and looks great.",2026-04-04
+R646,P58167,Talha Z.,4,"Exactly as described, fast to get used to and looks great.",2026-05-04
+R647,P47058,Sana J.,5,"Comfortable and stylish, would buy again.",2026-04-06
+R648,P47058,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-07-06
+R649,P47058,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-02-24
+R650,P47058,Hira W.,4,"Comfortable and stylish, would buy again.",2026-05-15
+R651,P47058,Danish Q.,3,"Decent, but sizing ran a little small for me.",2026-04-04
+R652,P37886,Talha Z.,5,"Good value, matched the photos well.",2026-03-23
+R653,P37886,Talha Z.,4,"Good value, matched the photos well.",2026-03-18
+R654,P2223,Fatima A.,4,"Comfortable and stylish, would buy again.",2026-05-29
+R655,P2223,Danish Q.,5,"Exactly as described, fast to get used to and looks great.",2026-07-19
+R656,P2223,Usman S.,4,"Exactly as described, fast to get used to and looks great.",2026-03-05
+R657,P50000,Ali H.,3,"Good product overall, delivery took a bit long.",2026-02-15
+R658,P50000,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-02-13
+R659,P50000,Fatima A.,5,"Exactly as described, fast to get used to and looks great.",2026-04-07
+R660,P50000,Bilal R.,5,"Exactly as described, fast to get used to and looks great.",2026-06-17
+R661,P50000,Ali H.,5,"Great quality for the price, fits true to size.",2026-06-03
+R662,P50000,Zainab N.,5,"Great quality for the price, fits true to size.",2026-03-21
+R663,P43082,Ayesha K.,3,"Decent, but sizing ran a little small for me.",2026-06-07
+R664,P43082,Mahnoor I.,3,"Decent, but sizing ran a little small for me.",2026-07-10
+R665,P43082,Mahnoor I.,4,"Exactly as described, fast to get used to and looks great.",2026-05-09
+R666,P43082,Talha Z.,4,"Comfortable and stylish, would buy again.",2026-05-12
+R667,P43082,Omar F.,5,Really happy with this — looks even better in person.,2026-02-10
+R668,P43082,Hamza T.,5,"Good value, matched the photos well.",2026-04-29
+R669,P42064,Rimsha L.,5,Really happy with this — looks even better in person.,2026-04-24
+R670,P42064,Zainab N.,3,"Good product overall, delivery took a bit long.",2026-04-13
+R671,P42064,Zainab N.,5,"Exactly as described, fast to get used to and looks great.",2026-03-14
+R672,P42064,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-07-16
+R673,P14876,Faisal B.,5,"Exactly as described, fast to get used to and looks great.",2026-04-21
+R674,P14876,Zainab N.,2,"Decent, but sizing ran a little small for me.",2026-02-20
+R675,P14876,Danish Q.,3,"Nice look, material could be a bit better for the price.",2026-03-13
+R676,P14876,Mahnoor I.,4,"Good value, matched the photos well.",2026-04-18
+R677,P54167,Hira W.,4,"Good value, matched the photos well.",2026-07-02
+R678,P54167,Hamza T.,3,"Good product overall, delivery took a bit long.",2026-07-27
+R679,P40122,Faisal B.,4,"Good value, matched the photos well.",2026-07-10
+R680,P40122,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-03-06
+R681,P40122,Zainab N.,4,"Exactly as described, fast to get used to and looks great.",2026-06-25
+R682,P40122,Fatima A.,5,"Good value, matched the photos well.",2026-05-27
+R683,P40122,Talha Z.,5,"Comfortable and stylish, would buy again.",2026-07-09
+R684,P40122,Faisal B.,2,"Good product overall, delivery took a bit long.",2026-06-20
+R685,P14934,Sara M.,4,"Good value, matched the photos well.",2026-07-26
+R686,P14934,Talha Z.,3,"Decent, but sizing ran a little small for me.",2026-07-05
+R687,P14934,Hira W.,3,"Nice look, material could be a bit better for the price.",2026-07-24
+R688,P14934,Fatima A.,3,"Nice look, material could be a bit better for the price.",2026-02-15
+R689,P14934,Rimsha L.,3,"Decent, but sizing ran a little small for me.",2026-03-22
+R690,P3503,Danish Q.,5,Really happy with this — looks even better in person.,2026-07-07
+R691,P3503,Mahnoor I.,4,"Good value, matched the photos well.",2026-07-28
+R692,P3503,Usman S.,3,"Nice look, material could be a bit better for the price.",2026-05-02
+R693,P1915,Faisal B.,3,"Nice look, material could be a bit better for the price.",2026-05-30
+R694,P1915,Hamza T.,4,Really happy with this — looks even better in person.,2026-07-29
+R695,P1915,Zainab N.,5,"Exactly as described, fast to get used to and looks great.",2026-04-25
+R696,P1915,Zainab N.,4,Really happy with this — looks even better in person.,2026-03-06
+R697,P31733,Zainab N.,5,Really happy with this — looks even better in person.,2026-05-26
+R698,P31733,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-07-06
+R699,P31733,Mahnoor I.,5,"Good value, matched the photos well.",2026-07-15
+R700,P31733,Talha Z.,5,"Great quality for the price, fits true to size.",2026-02-24
+R701,P41770,Omar F.,5,"Good value, matched the photos well.",2026-03-26
+R702,P41770,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-06-28
+R703,P41770,Omar F.,5,"Comfortable and stylish, would buy again.",2026-03-25
+R704,P41770,Talha Z.,5,"Comfortable and stylish, would buy again.",2026-07-26
+R705,P38223,Ali H.,5,"Good value, matched the photos well.",2026-06-14
+R706,P38223,Rimsha L.,3,"Nice look, material could be a bit better for the price.",2026-07-25
+R707,P38223,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-05-30
+R708,P38223,Ayesha K.,5,Really happy with this — looks even better in person.,2026-07-16
+R709,P38306,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-07-14
+R710,P38306,Ali H.,5,"Comfortable and stylish, would buy again.",2026-02-09
+R711,P38306,Talha Z.,3,"Decent, but sizing ran a little small for me.",2026-04-04
+R712,P38306,Faisal B.,4,Really happy with this — looks even better in person.,2026-04-04
+R713,P38306,Sana J.,5,"Comfortable and stylish, would buy again.",2026-04-17
+R714,P38306,Danish Q.,5,Really happy with this — looks even better in person.,2026-04-16
+R715,P46036,Omar F.,3,"Good product overall, delivery took a bit long.",2026-05-17
+R716,P46036,Rimsha L.,4,"Great quality for the price, fits true to size.",2026-05-26
+R717,P46036,Faisal B.,3,"Decent, but sizing ran a little small for me.",2026-04-30
+R718,P46036,Ali H.,5,"Comfortable and stylish, would buy again.",2026-02-14
+R719,P46036,Mahnoor I.,4,"Good value, matched the photos well.",2026-07-06
+R720,P51944,Sara M.,4,"Great quality for the price, fits true to size.",2026-07-03
+R721,P51944,Mahnoor I.,5,"Great quality for the price, fits true to size.",2026-06-15
+R722,P51944,Ali H.,3,"Decent, but sizing ran a little small for me.",2026-02-26
+R723,P35895,Hira W.,5,Really happy with this — looks even better in person.,2026-04-09
+R724,P35895,Talha Z.,4,"Comfortable and stylish, would buy again.",2026-04-15
+R725,P35895,Fatima A.,5,"Good value, matched the photos well.",2026-07-21
+R726,P35895,Ali H.,4,"Good value, matched the photos well.",2026-07-27
+R727,P35895,Hamza T.,5,"Great quality for the price, fits true to size.",2026-02-12
+R728,P35895,Ali H.,5,"Exactly as described, fast to get used to and looks great.",2026-05-11
+R729,P12474,Rimsha L.,4,"Comfortable and stylish, would buy again.",2026-05-19
+R730,P12474,Usman S.,4,"Great quality for the price, fits true to size.",2026-05-26
+R731,P12474,Usman S.,5,"Great quality for the price, fits true to size.",2026-04-22
+R732,P12474,Hira W.,2,"Decent, but sizing ran a little small for me.",2026-04-29
+R733,P12474,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-08-07
+R734,P12474,Mahnoor I.,3,"Decent, but sizing ran a little small for me.",2026-04-29
+R735,P2188,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-06-04
+R736,P2188,Faisal B.,3,"Nice look, material could be a bit better for the price.",2026-03-16
+R737,P2188,Usman S.,4,"Comfortable and stylish, would buy again.",2026-07-01
+R738,P47066,Fatima A.,4,"Exactly as described, fast to get used to and looks great.",2026-02-27
+R739,P47066,Ali H.,5,"Exactly as described, fast to get used to and looks great.",2026-04-28
+R740,P37511,Rimsha L.,5,"Good value, matched the photos well.",2026-07-26
+R741,P37511,Talha Z.,3,"Good product overall, delivery took a bit long.",2026-02-17
+R742,P37511,Zainab N.,5,"Good value, matched the photos well.",2026-06-13
+R743,P37511,Bilal R.,4,"Comfortable and stylish, would buy again.",2026-06-13
+R744,P5621,Faisal B.,5,"Great quality for the price, fits true to size.",2026-07-23
+R745,P5621,Faisal B.,5,Really happy with this — looks even better in person.,2026-05-12
+R746,P35335,Sana J.,3,"Good product overall, delivery took a bit long.",2026-05-27
+R747,P35335,Talha Z.,5,"Exactly as described, fast to get used to and looks great.",2026-07-08
+R748,P35335,Ayesha K.,5,"Comfortable and stylish, would buy again.",2026-04-11
+R749,P35335,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-04-22
+R750,P35335,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-05-03
+R751,P50051,Sara M.,3,"Nice look, material could be a bit better for the price.",2026-05-27
+R752,P50051,Hira W.,5,"Exactly as described, fast to get used to and looks great.",2026-06-17
+R753,P50051,Zainab N.,5,"Comfortable and stylish, would buy again.",2026-04-03
+R754,P50051,Danish Q.,5,"Great quality for the price, fits true to size.",2026-03-29
+R755,P50051,Sana J.,5,"Exactly as described, fast to get used to and looks great.",2026-04-28
+R756,P36114,Faisal B.,4,"Good value, matched the photos well.",2026-05-07
+R757,P36114,Bilal R.,5,"Exactly as described, fast to get used to and looks great.",2026-08-04
+R758,P36114,Rimsha L.,4,Really happy with this — looks even better in person.,2026-06-12
+R759,P36114,Sana J.,4,Really happy with this — looks even better in person.,2026-06-22
+R760,P21163,Ayesha K.,4,Really happy with this — looks even better in person.,2026-07-16
+R761,P21163,Hira W.,4,Really happy with this — looks even better in person.,2026-07-06
+R762,P21163,Danish Q.,5,"Comfortable and stylish, would buy again.",2026-05-13
+R763,P21163,Danish Q.,4,"Good value, matched the photos well.",2026-02-26
+R764,P42065,Talha Z.,4,Really happy with this — looks even better in person.,2026-06-10
+R765,P42065,Sara M.,5,"Great quality for the price, fits true to size.",2026-05-30
+R766,P42065,Zainab N.,5,"Exactly as described, fast to get used to and looks great.",2026-05-21
+R767,P30738,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-07-27
+R768,P30738,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-06-29
+R769,P28106,Zainab N.,4,"Great quality for the price, fits true to size.",2026-08-03
+R770,P28106,Zainab N.,5,Really happy with this — looks even better in person.,2026-05-20
+R771,P28106,Danish Q.,4,Really happy with this — looks even better in person.,2026-03-05
+R772,P28106,Sana J.,5,"Comfortable and stylish, would buy again.",2026-03-15
+R773,P28106,Ayesha K.,3,"Nice look, material could be a bit better for the price.",2026-06-02
+R774,P28106,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-02-15
+R775,P54992,Zainab N.,4,"Good value, matched the photos well.",2026-04-10
+R776,P54992,Sana J.,4,"Comfortable and stylish, would buy again.",2026-04-02
+R777,P54992,Bilal R.,4,"Good value, matched the photos well.",2026-08-01
+R778,P27416,Sana J.,4,"Comfortable and stylish, would buy again.",2026-05-22
+R779,P27416,Omar F.,5,"Exactly as described, fast to get used to and looks great.",2026-05-03
+R780,P27416,Ayesha K.,4,Really happy with this — looks even better in person.,2026-04-19
+R781,P27416,Omar F.,4,"Good value, matched the photos well.",2026-02-26
+R782,P27416,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-03-31
+R783,P45087,Hira W.,3,"Decent, but sizing ran a little small for me.",2026-03-25
+R784,P45087,Faisal B.,5,Really happy with this — looks even better in person.,2026-05-14
+R785,P45087,Sana J.,5,"Exactly as described, fast to get used to and looks great.",2026-06-21
+R786,P45087,Fatima A.,5,Really happy with this — looks even better in person.,2026-06-15
+R787,P57419,Ali H.,5,Really happy with this — looks even better in person.,2026-04-05
+R788,P57419,Usman S.,4,"Comfortable and stylish, would buy again.",2026-04-24
+R789,P57419,Mahnoor I.,4,"Great quality for the price, fits true to size.",2026-02-14
+R790,P57419,Ali H.,4,Really happy with this — looks even better in person.,2026-02-16
+R791,P50353,Sana J.,4,"Exactly as described, fast to get used to and looks great.",2026-04-23
+R792,P50353,Omar F.,5,"Comfortable and stylish, would buy again.",2026-07-13
+R793,P50353,Bilal R.,4,"Exactly as described, fast to get used to and looks great.",2026-07-16
+R794,P50353,Usman S.,2,"Nice look, material could be a bit better for the price.",2026-04-28
+R795,P19379,Talha Z.,3,"Good product overall, delivery took a bit long.",2026-03-27
+R796,P19379,Mahnoor I.,3,"Nice look, material could be a bit better for the price.",2026-06-25
+R797,P19379,Ayesha K.,2,"Nice look, material could be a bit better for the price.",2026-06-03
+R798,P19379,Sara M.,4,"Good value, matched the photos well.",2026-05-07
+R799,P19379,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-03-01
+R800,P19379,Omar F.,5,"Great quality for the price, fits true to size.",2026-06-10
+R801,P59460,Ali H.,5,"Good value, matched the photos well.",2026-03-22
+R802,P59460,Ali H.,4,Really happy with this — looks even better in person.,2026-07-13
+R803,P59460,Zainab N.,4,"Great quality for the price, fits true to size.",2026-04-28
+R804,P59460,Sara M.,5,"Exactly as described, fast to get used to and looks great.",2026-03-11
+R805,P27845,Talha Z.,4,Really happy with this — looks even better in person.,2026-04-03
+R806,P27845,Ayesha K.,4,Really happy with this — looks even better in person.,2026-02-27
+R807,P27845,Ayesha K.,5,Really happy with this — looks even better in person.,2026-06-28
+R808,P21450,Danish Q.,5,"Great quality for the price, fits true to size.",2026-04-01
+R809,P21450,Fatima A.,5,"Great quality for the price, fits true to size.",2026-02-28
+R810,P52510,Zainab N.,4,"Comfortable and stylish, would buy again.",2026-06-30
+R811,P52510,Sana J.,5,Really happy with this — looks even better in person.,2026-06-06
+R812,P52510,Sara M.,4,Really happy with this — looks even better in person.,2026-02-15
+R813,P41352,Usman S.,4,"Good value, matched the photos well.",2026-03-19
+R814,P41352,Usman S.,5,"Exactly as described, fast to get used to and looks great.",2026-07-27
+R815,P41352,Faisal B.,5,"Good value, matched the photos well.",2026-03-08
+R816,P41352,Usman S.,4,"Great quality for the price, fits true to size.",2026-07-10
+R817,P16156,Hamza T.,5,"Great quality for the price, fits true to size.",2026-06-06
+R818,P16156,Hira W.,4,"Exactly as described, fast to get used to and looks great.",2026-04-05
+R819,P16156,Ayesha K.,5,"Good value, matched the photos well.",2026-02-10
+R820,P16156,Hamza T.,5,"Great quality for the price, fits true to size.",2026-02-12
+R821,P16156,Sana J.,4,"Great quality for the price, fits true to size.",2026-04-11
+R822,P16156,Omar F.,3,"Decent, but sizing ran a little small for me.",2026-06-24
+R823,P20039,Talha Z.,4,"Comfortable and stylish, would buy again.",2026-06-13
+R824,P20039,Omar F.,5,"Great quality for the price, fits true to size.",2026-05-19
+R825,P20039,Hamza T.,4,"Comfortable and stylish, would buy again.",2026-04-18
+R826,P20039,Rimsha L.,5,"Great quality for the price, fits true to size.",2026-02-12
+R827,P17157,Usman S.,5,Really happy with this — looks even better in person.,2026-03-24
+R828,P17157,Bilal R.,3,"Good product overall, delivery took a bit long.",2026-07-25
+R829,P51961,Zainab N.,5,"Good value, matched the photos well.",2026-08-05
+R830,P51961,Hamza T.,5,"Good value, matched the photos well.",2026-02-24
+R831,P51961,Hamza T.,5,Really happy with this — looks even better in person.,2026-06-26
+R832,P51961,Danish Q.,5,"Great quality for the price, fits true to size.",2026-08-01
+R833,P51961,Usman S.,3,"Nice look, material could be a bit better for the price.",2026-06-14
+R834,P51961,Ali H.,5,"Great quality for the price, fits true to size.",2026-03-21
+R835,P43520,Rimsha L.,4,"Comfortable and stylish, would buy again.",2026-06-21
+R836,P43520,Bilal R.,5,"Comfortable and stylish, would buy again.",2026-07-01
+R837,P43520,Hamza T.,3,"Decent, but sizing ran a little small for me.",2026-06-12
+R838,P42066,Omar F.,5,"Good value, matched the photos well.",2026-05-11
+R839,P42066,Sana J.,5,Really happy with this — looks even better in person.,2026-06-26
+R840,P56222,Sana J.,4,"Great quality for the price, fits true to size.",2026-07-17
+R841,P56222,Faisal B.,5,"Great quality for the price, fits true to size.",2026-07-10
+R842,P56222,Faisal B.,2,"Good product overall, delivery took a bit long.",2026-03-23
+R843,P56222,Usman S.,4,"Good value, matched the photos well.",2026-08-06
+R844,P56222,Sana J.,5,"Comfortable and stylish, would buy again.",2026-06-20
+R845,P6190,Ali H.,4,"Exactly as described, fast to get used to and looks great.",2026-04-16
+R846,P6190,Bilal R.,4,Really happy with this — looks even better in person.,2026-06-25
+R847,P6190,Talha Z.,4,"Comfortable and stylish, would buy again.",2026-07-17
+R848,P6190,Ayesha K.,4,"Comfortable and stylish, would buy again.",2026-06-15
+R849,P30740,Zainab N.,3,"Decent, but sizing ran a little small for me.",2026-05-07
+R850,P30740,Sara M.,5,"Good value, matched the photos well.",2026-05-28
+R851,P30740,Rimsha L.,5,"Comfortable and stylish, would buy again.",2026-07-31
+R852,P30740,Mahnoor I.,5,"Comfortable and stylish, would buy again.",2026-08-07
+R853,P39135,Faisal B.,5,"Good value, matched the photos well.",2026-05-25
+R854,P39135,Ali H.,3,"Good product overall, delivery took a bit long.",2026-07-23
+R855,P39135,Faisal B.,4,"Good value, matched the photos well.",2026-06-04
+R856,P39135,Ayesha K.,4,"Exactly as described, fast to get used to and looks great.",2026-07-26
+R857,P39135,Rimsha L.,4,Really happy with this — looks even better in person.,2026-08-01
+R858,P39135,Hira W.,5,"Comfortable and stylish, would buy again.",2026-07-28
