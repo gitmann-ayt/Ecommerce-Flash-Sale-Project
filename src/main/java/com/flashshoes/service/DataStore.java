@@ -86,7 +86,7 @@ public class DataStore {
     public User getCurrentUser() { return currentUser; }
     public void setCurrentUser(User currentUser) { this.currentUser = currentUser; }
 
-    public String nextProductId() { return "P" + (productsById.size() + 1 + (int) (Math.random() * 1000)); }
+    public String nextProductId() { return "PA" + (productsById.size() + 1 + (int) (Math.random() * 1000)); }
     public String nextUserId() { return "U" + (usersById.size() + 1 + (int) (Math.random() * 1000)); }
     public String nextSaleId() { return "FS" + (flashSales.size() + 1); }
     public String nextOrderId() { return "ORD" + System.currentTimeMillis(); }

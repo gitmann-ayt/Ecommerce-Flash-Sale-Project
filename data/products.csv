@@ -1,61 +1,61 @@
 id,name,brand,category,gender,price,stock,imagePath
-P001,Puma Air Zoom Pegasus (Black),Puma,Running,Unisex,78.38,21,data/images/P001.png
-P002,Adidas RS-X Runner (White),Adidas,Running,Unisex,117.96,42,data/images/P002.png
-P003,Nike Ghost (Olive),Nike,Running,Men,57.53,21,data/images/P003.png
-P004,Adidas Ghost (Maroon),Adidas,Running,Men,102.71,53,data/images/P004.png
-P005,Puma RS-X Runner (Charcoal),Puma,Running,Women,73.74,45,data/images/P005.png
-P006,ASICS Air Zoom Pegasus (Navy),ASICS,Running,Unisex,90.92,25,data/images/P006.png
-P007,Adidas Ultraboost (Blue),Adidas,Running,Men,62.88,14,data/images/P007.png
-P008,ASICS Gel-Kayano (Maroon),ASICS,Running,Women,123.61,54,data/images/P008.png
-P009,New Balance Ghost (White),New Balance,Running,Women,61.7,26,data/images/P009.png
-P010,Puma Ghost (Blue),Puma,Running,Unisex,71.34,12,data/images/P010.png
-P011,Nike RS-X Runner (Grey),Nike,Running,Women,138.74,22,data/images/P011.png
-P012,Nike Fresh Foam (Red),Nike,Running,Women,109.03,31,data/images/P012.png
-P013,Vans Suede Classic (Blue),Vans,Casual,Men,73.56,52,data/images/P013.png
-P014,Nike Court Vision (White),Nike,Casual,Unisex,71.27,42,data/images/P014.png
-P015,Nike Old Skool (Navy),Nike,Casual,Women,54.66,48,data/images/P015.png
-P016,Nike Cloudfoam Pure (Grey),Nike,Casual,Unisex,51.08,57,data/images/P016.png
-P017,Converse Old Skool (Black),Converse,Casual,Women,56.08,12,data/images/P017.png
-P018,Vans Cloudfoam Pure (Blue),Vans,Casual,Men,72.6,33,data/images/P018.png
-P019,Nike Cali Street (Navy),Nike,Casual,Women,39.08,55,data/images/P019.png
-P020,Adidas Cloudfoam Pure (Red),Adidas,Casual,Unisex,68.0,45,data/images/P020.png
-P021,Skechers Suede Classic (Grey),Skechers,Casual,Men,63.12,13,data/images/P021.png
-P022,Converse Chuck Taylor All Star (Navy),Converse,Casual,Unisex,40.4,51,data/images/P022.png
-P023,Skechers Cloudfoam Pure (White),Skechers,Casual,Women,54.81,37,data/images/P023.png
-P024,Adidas Suede Classic (Charcoal),Adidas,Casual,Men,74.22,15,data/images/P024.png
-P025,Florsheim Monk Strap (Blue),Florsheim,Formal,Men,85.82,18,data/images/P025.png
-P026,Hush Puppies Oxford Leather (Red),Hush Puppies,Formal,Unisex,135.01,40,data/images/P026.png
-P027,Clarks Monk Strap (Charcoal),Clarks,Formal,Unisex,75.89,31,data/images/P027.png
-P028,Bata Slip-On Loafer (Charcoal),Bata,Formal,Men,117.89,39,data/images/P028.png
-P029,Clarks Oxford Leather (Blue),Clarks,Formal,Women,80.14,23,data/images/P029.png
-P030,Florsheim Oxford Leather (White),Florsheim,Formal,Unisex,106.03,12,data/images/P030.png
-P031,Florsheim Derby Classic (Navy),Florsheim,Formal,Unisex,104.9,43,data/images/P031.png
-P032,Bata Monk Strap (Charcoal),Bata,Formal,Unisex,99.43,21,data/images/P032.png
-P033,Florsheim Derby Classic (Red),Florsheim,Formal,Women,159.49,49,data/images/P033.png
-P034,Woodland Cap-Toe Brogue (Charcoal),Woodland,Formal,Women,67.71,22,data/images/P034.png
-P035,Clarks Monk Strap (Black),Clarks,Formal,Unisex,113.16,45,data/images/P035.png
-P036,Bata Oxford Leather (White),Bata,Formal,Unisex,121.27,22,data/images/P036.png
-P037,Nike Phantom Trainer (Blue),Nike,Sports,Men,81.13,25,data/images/P037.png
-P038,ASICS HOVR Rise (Grey),ASICS,Sports,Unisex,50.58,44,data/images/P038.png
-P039,Under Armour HOVR Rise (Grey),Under Armour,Sports,Women,104.6,20,data/images/P039.png
-P040,Nike Phantom Trainer (Olive),Nike,Sports,Women,73.89,37,data/images/P040.png
-P041,ASICS Phantom Trainer (White),ASICS,Sports,Men,72.21,29,data/images/P041.png
-P042,Nike Speedcat (Grey),Nike,Sports,Men,82.9,16,data/images/P042.png
-P043,Reebok Speedcat (Red),Reebok,Sports,Women,59.98,12,data/images/P043.png
-P044,Reebok Court Slide (White),Reebok,Sports,Men,92.17,42,data/images/P044.png
-P045,Nike Phantom Trainer (Grey),Nike,Sports,Men,72.51,38,data/images/P045.png
-P046,Adidas HOVR Rise (Black),Adidas,Sports,Men,70.32,32,data/images/P046.png
-P047,Puma HOVR Rise (Red),Puma,Sports,Women,95.73,54,data/images/P047.png
-P048,Under Armour HOVR Rise (Navy),Under Armour,Sports,Men,63.74,11,data/images/P048.png
-P049,Puma Flip Flow (Black),Puma,Sandals,Unisex,29.6,11,data/images/P049.png
-P050,Puma Sport Sandal (Charcoal),Puma,Sandals,Unisex,23.83,40,data/images/P050.png
-P051,Woodland Trail Sandal (White),Woodland,Sandals,Unisex,20.51,23,data/images/P051.png
-P052,Skechers Comfort Slide (Maroon),Skechers,Sandals,Men,39.42,10,data/images/P052.png
-P053,Puma Comfort Slide (Olive),Puma,Sandals,Unisex,39.6,41,data/images/P053.png
-P054,Crocs Classic Clog (Grey),Crocs,Sandals,Unisex,44.5,23,data/images/P054.png
-P055,Crocs Sport Sandal (Navy),Crocs,Sandals,Unisex,41.88,37,data/images/P055.png
-P056,Crocs Comfort Slide (Black),Crocs,Sandals,Women,40.98,44,data/images/P056.png
-P057,Woodland Comfort Slide (Charcoal),Woodland,Sandals,Men,36.72,16,data/images/P057.png
-P058,Crocs Comfort Slide (Grey),Crocs,Sandals,Women,28.54,36,data/images/P058.png
-P059,Puma Classic Clog (Maroon),Puma,Sandals,Unisex,37.57,50,data/images/P059.png
-P060,Puma Classic Clog (White),Puma,Sandals,Men,27.79,14,data/images/P060.png
+P24115,Playboy Men Turquoise Blue Casual Flip Flops,Playboy,Sandals,Men,19.39,31,data/images/P24115.jpg
+P26672,Puma Men Triangle Navy Blue Flip Flops,Puma,Sandals,Men,48.77,12,data/images/P26672.jpg
+P48526,Calvin Klein Men Brown Flip Flops,Calvin,Sandals,Men,41.85,13,data/images/P48526.jpg
+P16116,Numero Uno Men Casual Green Slipper,Numero,Sandals,Men,40.76,40,data/images/P16116.jpg
+P23820,Puma Unisex Black Flip Flops,Puma,Sandals,Unisex,32.23,45,data/images/P23820.jpg
+P53878,U.S. Polo Assn. Men Navy Blue Flip Flops,U.S.,Sandals,Men,38.51,58,data/images/P53878.jpg
+P11868,Franco Leone Men Casual Black Sandals,Franco Leone,Sandals,Men,45.34,10,data/images/P11868.jpg
+P2821,Lee Cooper Men Formal Leather Brown Sandal,Lee Cooper,Sandals,Men,34.64,59,data/images/P2821.jpg
+P35592,Gliders Men Navy Blue Sandals,Gliders,Sandals,Men,39.15,20,data/images/P35592.jpg
+P15363,Red Tape Men Casual Brown Sandals,Red Tape,Sandals,Men,29.9,38,data/images/P15363.jpg
+P20869,Fila Men Camper Brown Sandals,Fila,Sandals,Men,36.55,11,data/images/P20869.jpg
+P15392,FILA Men Cage Navy Blue Slippers,FILA,Sandals,Men,34.67,59,data/images/P15392.jpg
+P47222,Franco Leone Men Brown Sandals,Franco Leone,Sandals,Men,51.27,29,data/images/P47222.jpg
+P44728,Globalite Women Purple Flip Flops,Globalite,Sandals,Women,54.35,13,data/images/P44728.jpg
+P16735,Lotto Men Emeriti Black Slipper,Lotto,Sandals,Men,36.67,19,data/images/P16735.jpg
+P15254,ADIDAS Originals Women Decade Low Sleek Red Casual Shoes,ADIDAS,Casual,Women,64.15,19,data/images/P15254.jpg
+P4509,Skechers Men's Arcade Midway Beige Shoe,Skechers,Casual,Men,63.84,58,data/images/P4509.jpg
+P17691,Vans Men Chukka Low Navy Blue Casual Shoes,Vans,Casual,Men,62.83,34,data/images/P17691.jpg
+P26550,ID Men Blue Shoes,ID,Casual,Men,65.3,33,data/images/P26550.jpg
+P3258,Puma Men's Basket White Red Shoe,Puma,Casual,Men,35.98,22,data/images/P3258.jpg
+P49502,Vans Men Brown 106 Moc CA LNS Shoes,Vans,Casual,Men,87.42,50,data/images/P49502.jpg
+P17701,Vans Men Chauffeur Navy Blue Casual Shoes,Vans,Casual,Men,51.57,31,data/images/P17701.jpg
+P4113,Fila Men's Bruno White Shoe,Fila,Casual,Men,49.08,56,data/images/P4113.jpg
+P4140,Skechers Women Green Shoe,Skechers,Casual,Women,70.19,38,data/images/P4140.jpg
+P50751,Red Chief Men Mushroom Brown Shoes,Red,Casual,Men,94.78,60,data/images/P50751.jpg
+P39892,ADIDAS Men Brown Shoes,ADIDAS,Casual,Men,78.89,49,data/images/P39892.jpg
+P24255,Numero Uno Men Black Casual Shoes,Numero,Casual,Men,30.57,50,data/images/P24255.jpg
+P26537,ID Men Blue Shoes,ID,Casual,Men,52.49,23,data/images/P26537.jpg
+P39646,Lotto Men Black Casual Shoes,Lotto,Casual,Men,88.79,47,data/images/P39646.jpg
+P7802,Puma Men's Benecio Leather Black Plaza Taupe Shoe,Puma,Casual,Men,89.71,23,data/images/P7802.jpg
+P33340,Homme Men Black Semi Formal Shoes,Homme,Formal,Men,129.53,25,data/images/P33340.jpg
+P33521,Cobblerz Women Brown Wedges,Cobblerz,Formal,Women,98.46,39,data/images/P33521.jpg
+P53132,Catwalk Women Grey Flats,Catwalk,Formal,Women,147.09,31,data/images/P53132.jpg
+P11516,Catwalk Women Lifestyle Black Heels,Catwalk,Formal,Women,102.45,27,data/images/P11516.jpg
+P45359,Cobblerz Women White Sandals,Cobblerz,Formal,Women,77.69,27,data/images/P45359.jpg
+P18876,Franco Leone Men Formal Black Shoes,Franco Leone,Formal,Men,73.38,31,data/images/P18876.jpg
+P17490,Rockport Women Casual Black Flats,Rockport,Formal,Women,137.42,57,data/images/P17490.jpg
+P39189,Catwalk Women Red Sandals,Catwalk,Formal,Women,76.22,13,data/images/P39189.jpg
+P2912,Catwalk Women Wedding Gold Crystal Heels,Catwalk,Formal,Women,101.6,9,data/images/P2912.jpg
+P33133,Catwalk Women Black Stilettos,Catwalk,Formal,Women,138.9,40,data/images/P33133.jpg
+P11920,Franco Leone Men Formal Black Shoe,Franco Leone,Formal,Men,71.18,29,data/images/P11920.jpg
+P11896,Franco Leone Men Formal Black Formal Shoes,Franco Leone,Formal,Men,151.98,54,data/images/P11896.jpg
+P47547,Portia Women Silver Flats,Portia,Formal,Women,146.76,27,data/images/P47547.jpg
+P13146,Inc 5 Women Casual Bronze Heels,Inc 5,Formal,Women,136.43,17,data/images/P13146.jpg
+P41743,Catwalk Women Bronze Heels,Catwalk,Formal,Women,135.8,14,data/images/P41743.jpg
+P5367,Artengo Artengo 633d Man Black,Artengo,Sports,Men,55.24,60,data/images/P5367.jpg
+P44403,Force 10 Men Olive Shoes,Force,Sports,Men,102.57,26,data/images/P44403.jpg
+P2353,Reebok Men Frisky Attraction Grey Shoe,Reebok,Sports,Men,99.72,32,data/images/P2353.jpg
+P5725,Reebok Men's Outdoor White Shoe,Reebok,Sports,Men,50.42,21,data/images/P5725.jpg
+P4487,Lotto Men's Play Off Black Blue Shoe,Lotto,Sports,Men,88.01,60,data/images/P4487.jpg
+P31973,Nike Men Dual Fusion ST 2 Black Sports Shoes,Nike,Sports,Men,62.64,51,data/images/P31973.jpg
+P4557,Nike Men's Sweet Classic White Shoe,Nike,Sports,Men,55.15,19,data/images/P4557.jpg
+P29229,ADIDAS Men Power Howard Black Sports Shoes,ADIDAS,Sports,Men,72.68,17,data/images/P29229.jpg
+P9105,Puma Men Complete Vectana 2 Black Sports Shoes,Puma,Sports,Men,42.3,24,data/images/P9105.jpg
+P42039,Nike Men White Dart Sports Shoes,Nike,Sports,Men,58.84,36,data/images/P42039.jpg
+P8912,Puma Men Cabana Racer Sketch White Sports Shoes,Puma,Sports,Men,112.59,31,data/images/P8912.jpg
+P8307,Skechers Men's Sports Black Mustard Shoe,Skechers,Sports,Men,86.63,49,data/images/P8307.jpg
+P39651,Lotto Men White Sports Shoes,Lotto,Sports,Men,76.65,8,data/images/P39651.jpg
+P28605,Nike Men Dunk High Black Shoes,Nike,Sports,Men,77.51,28,data/images/P28605.jpg
+P19303,Nike Men Waffle Racer II Red Sports Shoes,Nike,Sports,Men,117.95,33,data/images/P19303.jpg
