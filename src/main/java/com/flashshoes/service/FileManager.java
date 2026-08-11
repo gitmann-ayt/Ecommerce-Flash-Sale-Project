@@ -144,6 +144,7 @@ public class FileManager {
             order.updateStatus(OrderStatus.valueOf(first[7]));
             order.setPaymentMethodUsed(first[8]);
             orders.add(order);
+            customer.addOrderToHistory(order);
         }
         return orders;
     }

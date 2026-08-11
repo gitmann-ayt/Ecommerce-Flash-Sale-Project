@@ -1,1 +1,2 @@
-orderId,customerId,productId,quantity,priceAtPurchase,timestamp,status,paymentMethod
+orderId,customerId,productId,quantity,size,priceAtPurchase,timestamp,status,paymentMethod
+ORD1786469476265,U49,P23820,1,6,32.23,2026-08-11T22:31:16.2655787,CONFIRMED,Cash on Delivery

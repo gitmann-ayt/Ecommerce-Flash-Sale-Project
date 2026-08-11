@@ -24,10 +24,15 @@ public class OrderProcessor implements Runnable {
     private final BlockingQueue<Order> orderQueue = new LinkedBlockingQueue<>();
     private volatile boolean running = true;
     private OrderSettledListener listener;
+    private Runnable persistenceListener;
     private Thread workerThread;
 
     public void setListener(OrderSettledListener listener) {
         this.listener = listener;
+    }
+
+    public void setPersistenceListener(Runnable persistenceListener) {
+        this.persistenceListener = persistenceListener;
     }
 
     public void submit(Order order) {
@@ -61,6 +66,9 @@ public class OrderProcessor implements Runnable {
     public void processOrder(Order order) throws InterruptedException {
         Thread.sleep(800); // simulated payment-gateway / fulfilment delay
         order.updateStatus(OrderStatus.CONFIRMED);
+        if (persistenceListener != null) {
+            persistenceListener.run();
+        }
         if (listener != null) {
             Platform.runLater(() -> listener.onOrderSettled(order));
         }

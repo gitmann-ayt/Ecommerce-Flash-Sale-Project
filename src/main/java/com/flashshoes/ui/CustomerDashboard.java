@@ -37,6 +37,7 @@ public class CustomerDashboard extends BorderPane {
     private final Label welcomeLabel = new Label();
 
     private String selectedCategory = ALL_CATEGORIES;
+    private int knownActiveSales = -1;
 
     public CustomerDashboard() {
         this.customer = (Customer) store.getCurrentUser();
@@ -45,10 +46,22 @@ public class CustomerDashboard extends BorderPane {
         setCenter(buildCenter());
         setRight(buildCartPanel());
 
-        store.flashSaleScheduler.setListener(this::refresh);
+        store.flashSaleScheduler.setListener(this::updateFlashSaleStatus);
         store.orderProcessor.setListener(order -> refreshCart());
 
         refresh();
+        knownActiveSales = store.getActiveFlashSales().size();
+    }
+
+    private void updateFlashSaleStatus() {
+        int activeCount = store.getActiveFlashSales().size();
+        if (activeCount != knownActiveSales) {
+            knownActiveSales = activeCount;
+            refreshFlashSaleBanner();
+            refreshProductGrid();
+        } else {
+            refreshFlashSaleBanner();
+        }
     }
 
     private Node buildTopBar() {

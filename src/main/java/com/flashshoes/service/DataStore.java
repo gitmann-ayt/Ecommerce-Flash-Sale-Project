@@ -30,6 +30,7 @@ public class DataStore {
     private DataStore() {
         loadAll();
         flashSaleScheduler = new FlashSaleScheduler(flashSales);
+        orderProcessor.setPersistenceListener(this::persistOrders);
         orderProcessor.start();
         flashSaleScheduler.start();
     }
