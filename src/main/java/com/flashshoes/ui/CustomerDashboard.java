@@ -330,18 +330,44 @@ public class CustomerDashboard extends BorderPane {
         for (CartLine line : cart.getLines()) {
             HBox row = new HBox(8);
             row.setAlignment(Pos.CENTER_LEFT);
-            Label label = new Label(line.getProduct().getName() + "  (size " + line.getSize() + ")  x" + line.getQuantity());
+
+            VBox labelBox = new VBox(2);
+            Label label = new Label(line.getProduct().getName() + "  (size " + line.getSize() + ")");
             label.setWrapText(true);
-            label.setMaxWidth(160);
+            label.setMaxWidth(150);
+            Label unitPrice = new Label(String.format("$%.2f each", line.getProduct().getPrice()));
+            unitPrice.setStyle("-fx-text-fill: #888; -fx-font-size: 10;");
+            labelBox.getChildren().addAll(label, unitPrice);
+            HBox.setHgrow(labelBox, Priority.ALWAYS);
+
+            Button minusBtn = new Button("-");
+            minusBtn.getStyleClass().add("secondary");
+            minusBtn.setMinWidth(26);
+            minusBtn.setOnAction(e -> {
+                cart.updateQuantity(line, line.getQuantity() - 1);
+                refreshCart();
+            });
+
+            Label qtyLabel = new Label(String.valueOf(line.getQuantity()));
+            qtyLabel.setMinWidth(20);
+            qtyLabel.setAlignment(Pos.CENTER);
+
+            Button plusBtn = new Button("+");
+            plusBtn.getStyleClass().add("secondary");
+            plusBtn.setMinWidth(26);
+            plusBtn.setOnAction(e -> {
+                cart.updateQuantity(line, line.getQuantity() + 1);
+                refreshCart();
+            });
+
             Button removeBtn = new Button("x");
             removeBtn.getStyleClass().add("secondary");
             removeBtn.setOnAction(e -> {
                 cart.removeLine(line);
                 refreshCart();
             });
-            Region spacer = new Region();
-            HBox.setHgrow(spacer, Priority.ALWAYS);
-            row.getChildren().addAll(label, spacer, removeBtn);
+
+            row.getChildren().addAll(labelBox, minusBtn, qtyLabel, plusBtn, removeBtn);
             cartBox.getChildren().add(row);
         }
         cartTotalLabel.setText("Total: $" + String.format("%.2f", cart.getTotal()));
@@ -362,13 +388,6 @@ public class CustomerDashboard extends BorderPane {
     }
 
     private void showOrderHistory() {
-        StringBuilder sb = new StringBuilder();
-        for (Order o : customer.getOrderHistory()) {
-            sb.append(o.getOrderId()).append(":  $")
-              .append(String.format("%.2f", o.getTotalAmount()))
-              .append("  (").append(o.getStatus()).append(")\n");
-        }
-        if (sb.length() == 0) sb.append("No orders yet.");
-        new Alert(Alert.AlertType.INFORMATION, sb.toString()).showAndWait();
+        new OrderHistoryScreen(customer).showAndWait();
     }
 }

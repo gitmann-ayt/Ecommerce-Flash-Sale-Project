@@ -1,6 +1,7 @@
 package com.flashshoes.ui;
 
 import com.flashshoes.model.Admin;
+import com.flashshoes.model.InvalidCredentialsException;
 import com.flashshoes.model.User;
 import com.flashshoes.service.DataStore;
 import javafx.geometry.Insets;
@@ -41,7 +42,13 @@ public class LoginScreen extends VBox {
             String email = emailField.getText().trim();
             String password = passwordField.getText();
             User user = DataStore.getInstance().findUserByEmail(email);
-            if (user == null || !user.login(password)) {
+            if (user == null) {
+                errorLabel.setText("Invalid email or password.");
+                return;
+            }
+            try {
+                user.login(password);
+            } catch (InvalidCredentialsException ex) {
                 errorLabel.setText("Invalid email or password.");
                 return;
             }

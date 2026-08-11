@@ -88,10 +88,11 @@ public class CheckoutDialog extends Dialog<Order> {
                 method = new CreditCardPayment("4242");
             }
 
-            boolean paid = method.processPayment(total);
-            if (!paid) {
+            try {
+                method.processPayment(total);
+            } catch (PaymentDeclinedException ex) {
                 for (Runnable r : rollbacks) r.run();
-                new Alert(Alert.AlertType.WARNING, "Payment failed (insufficient wallet balance?).").showAndWait();
+                new Alert(Alert.AlertType.WARNING, "Payment failed: " + ex.getMessage()).showAndWait();
                 return null;
             }
 

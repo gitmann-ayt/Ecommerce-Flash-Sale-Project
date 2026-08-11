@@ -9,12 +9,13 @@ public class WalletPayment implements PaymentMethod {
     }
 
     @Override
-    public boolean processPayment(double amount) {
-        if (customer.getWalletBalance() >= amount) {
-            customer.deductWallet(amount);
-            return true;
+    public void processPayment(double amount) throws PaymentDeclinedException {
+        if (customer.getWalletBalance() < amount) {
+            throw new PaymentDeclinedException(String.format(
+                    "Insufficient wallet balance: have $%.2f, need $%.2f",
+                    customer.getWalletBalance(), amount));
         }
-        return false;
+        customer.deductWallet(amount);
     }
 
     @Override

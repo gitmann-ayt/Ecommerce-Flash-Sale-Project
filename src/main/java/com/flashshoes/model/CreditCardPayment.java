@@ -9,9 +9,11 @@ public class CreditCardPayment implements PaymentMethod {
     }
 
     @Override
-    public boolean processPayment(double amount) {
-        // Simulated gateway check: any positive amount with a "card" succeeds.
-        return amount > 0;
+    public void processPayment(double amount) throws PaymentDeclinedException {
+        // Simulated gateway check: any positive amount with a card succeeds.
+        if (amount <= 0) {
+            throw new PaymentDeclinedException("Card declined: invalid amount $" + amount);
+        }
     }
 
     @Override

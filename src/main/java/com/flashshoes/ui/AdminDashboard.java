@@ -16,6 +16,8 @@ import javafx.scene.text.FontWeight;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -28,7 +30,10 @@ public class AdminDashboard extends BorderPane {
     private final TableView<Order> orderTable = new TableView<>();
     private final TableView<FlashSale> saleTable = new TableView<>();
     private final TextArea stressLog = new TextArea();
-
+    private final Label totalRevenueLabel = new Label();
+    private final Label totalOrdersLabel = new Label();
+    private final ListView<String> topProductsList = new ListView<>();
+    
     public AdminDashboard() {
         setTop(buildTopBar());
 
@@ -37,8 +42,10 @@ public class AdminDashboard extends BorderPane {
                 new Tab("Products", buildProductsTab()),
                 new Tab("Flash Sales", buildFlashSalesTab()),
                 new Tab("Orders", buildOrdersTab()),
+                new Tab("Analytics", buildAnalyticsTab()),
                 new Tab("Concurrency Demo", buildStressTestTab())
         );
+
         tabs.getTabs().forEach(t -> t.setClosable(false));
         setCenter(tabs);
 
@@ -190,6 +197,65 @@ public class AdminDashboard extends BorderPane {
         box.getChildren().addAll(new Label("Flash Sales"), saleTable, form);
         return box;
     }
+    
+    // ---------------- ANALYTICS TAB ----------------
+
+    private Node buildAnalyticsTab() {
+        VBox box = new VBox(16);
+        box.setPadding(new Insets(14));
+
+        HBox statsRow = new HBox(20);
+        statsRow.getChildren().addAll(statCard("Total Revenue", totalRevenueLabel), statCard("Total Orders", totalOrdersLabel));
+
+        Label topHeader = new Label("Top Selling Products");
+        topHeader.setFont(Font.font("System", FontWeight.BOLD, 14));
+        topProductsList.setPrefHeight(220);
+
+        Button refreshBtn = new Button("Refresh");
+        refreshBtn.setOnAction(e -> refreshAll());
+
+        box.getChildren().addAll(new Label("Store Analytics"), statsRow, topHeader, topProductsList, refreshBtn);
+        return box;
+    }
+
+    private VBox statCard(String title, Label valueLabel) {
+        VBox card = new VBox(4);
+        card.setPadding(new Insets(14));
+        card.setStyle("-fx-background-color: #EAF1FB; -fx-background-radius: 8;");
+        card.setPrefWidth(180);
+        Label titleLabel = new Label(title);
+        titleLabel.setStyle("-fx-text-fill: #666; -fx-font-size: 11;");
+        valueLabel.setFont(Font.font("System", FontWeight.BOLD, 22));
+        valueLabel.setTextFill(Color.web("#1F3A5F"));
+        card.getChildren().addAll(titleLabel, valueLabel);
+        return card;
+    }
+
+    /** Confirmed-order revenue + a simple top-5-by-quantity-sold ranking, computed from order history. */
+    private void refreshAnalytics() {
+        List<Order> orders = store.getAllOrders();
+        double revenue = 0;
+        Map<String, Integer> qtyByProduct = new HashMap<>();
+        for (Order o : orders) {
+            if (o.getStatus() == OrderStatus.CONFIRMED) {
+                revenue += o.getTotalAmount();
+            }
+            for (OrderItem item : o.getItems()) {
+                qtyByProduct.merge(item.getProduct().getName(), item.getQuantity(), Integer::sum);
+            }
+        }
+        totalRevenueLabel.setText(String.format("$%.2f", revenue));
+        totalOrdersLabel.setText(String.valueOf(orders.size()));
+
+        topProductsList.getItems().clear();
+        qtyByProduct.entrySet().stream()
+                .sorted((a, b) -> b.getValue() - a.getValue())
+                .limit(5)
+                .forEach(e -> topProductsList.getItems().add(e.getKey() + " - " + e.getValue() + " sold"));
+        if (topProductsList.getItems().isEmpty()) {
+            topProductsList.getItems().add("No orders yet.");
+        }
+    }
 
     // ---------------- ORDERS TAB ----------------
 
@@ -319,5 +385,6 @@ public class AdminDashboard extends BorderPane {
         productTable.setItems(FXCollections.observableArrayList(store.getAllProducts()));
         saleTable.setItems(FXCollections.observableArrayList(store.getAllFlashSales()));
         orderTable.setItems(FXCollections.observableArrayList(store.getAllOrders()));
+        refreshAnalytics();
     }
 }

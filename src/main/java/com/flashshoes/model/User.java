@@ -31,8 +31,10 @@ public abstract class User {
         this.passwordHash = passwordHash;
     }
 
-    public boolean login(String attemptedPassword) {
-        return this.passwordHash.equals(hash(attemptedPassword));
+    public void login(String attemptedPassword) throws InvalidCredentialsException {
+        if (!this.passwordHash.equals(hash(attemptedPassword))) {
+            throw new InvalidCredentialsException("Incorrect password for " + email);
+        }
     }
 
     public void logout() {

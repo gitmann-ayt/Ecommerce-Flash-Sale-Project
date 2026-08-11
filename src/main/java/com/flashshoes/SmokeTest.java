@@ -27,8 +27,18 @@ public class SmokeTest {
         List<User> users = fm.loadUsers();
         System.out.println("Loaded users: " + users.size());
         User admin = users.stream().filter(u -> u.getRole().equals("ADMIN")).findFirst().orElseThrow();
-        if (!admin.login("admin123")) throw new AssertionError("Admin login failed with seeded password!");
-        if (admin.login("wrongpassword")) throw new AssertionError("Admin login succeeded with WRONG password!");
+        try {
+            admin.login("admin123");
+        } catch (InvalidCredentialsException ex) {
+            throw new AssertionError("Admin login failed with seeded password!");
+        }
+        boolean wrongPasswordAccepted = true;
+        try {
+            admin.login("wrongpassword");
+        } catch (InvalidCredentialsException ex) {
+            wrongPasswordAccepted = false;
+        }
+        if (wrongPasswordAccepted) throw new AssertionError("Admin login succeeded with WRONG password!");
         System.out.println("Login hash check: OK");
 
         Map<String, Product> byId = new HashMap<>();
