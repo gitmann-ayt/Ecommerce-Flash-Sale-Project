@@ -30,8 +30,8 @@ public class Customer extends User {
 
     public Cart getCart() { return cart; }
 
-    public void addToCart(Product product, int qty) {
-        cart.addItem(product, qty);
+    public void addToCart(Product product, String size, int qty) {
+        cart.addItem(product, size, qty);
     }
 
     public List<Order> getOrderHistory() { return orderHistory; }

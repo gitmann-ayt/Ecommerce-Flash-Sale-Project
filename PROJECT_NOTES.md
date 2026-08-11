@@ -46,6 +46,7 @@ so the examiner sees the same guarantee in the actual GUI.
 | GUI framework | JavaFX (`ui/` package) — Login, Register, Customer dashboard, Admin dashboard, Checkout dialog |
 | Global styling | `src/main/resources/com/flashshoes/css/app.css`, applied to every `Scene` in `MainApp.themedScene()` |
 | CSV persistence | `FileManager` — loads/saves `products.csv`, `users.csv`, `flashsales.csv`, `orders.csv` in `data/` |
+| Real dataset import | `import_dataset.py` — builds the catalogue from Kaggle's real "Fashion Product Images (Small)" dataset (real names/photos/categories; price and stock are store-assigned, see README's "About the dataset") |
 | Data survives restart | `DataStore` loads all CSVs on first access (singleton init) and every mutation (`addProduct`, `addOrder`, `registerCustomer`, ...) immediately persists back to disk |
 
 ## CLO 4 — IDE & Version Control
@@ -68,6 +69,11 @@ branching, and a day-by-day commit schedule for the group.
 - `CreditCardPayment.processPayment()` and `CashOnDelivery` are simulated —
   no real payment gateway is called (correctly out of scope for a course project;
   say so explicitly rather than implying it's real).
+- `price` and `stock` in the imported catalogue are store-assigned (category price
+  bands + a default stock range), not scraped — because the Kaggle dataset is a
+  product-*image* dataset, not a retail export, and no such dataset carries a
+  store's live pricing/inventory. Say this plainly if asked; don't imply the prices
+  are "real" market prices.
 - Login sessions are in-memory only (no "remember me" / persistent session) —
   acceptable for a single-user desktop app.
 - `nextProductId()`/`nextUserId()` use `Math.random()` for ID suffixes, which

@@ -34,50 +34,58 @@ Or register a new customer account from the login screen.
 4. Run `com.flashshoes.ui.MainApp`.
 
 ## Project structure
-
-```
 src/main/java/com/flashshoes/
-  model/     Plain domain classes — User hierarchy, Product, FlashSale, Cart,
-             Order, OrderItem, PaymentMethod + 3 implementations
-  service/   Business logic — InventoryManager (thread-safe stock),
-             FlashSaleScheduler (countdown thread), OrderProcessor
-             (producer-consumer order settlement), FileManager (CSV I/O),
-             DataStore (wires everything together, single source of truth)
-  ui/        JavaFX screens — LoginScreen, RegisterScreen, CustomerDashboard,
-             AdminDashboard (includes a live concurrency stress-test tab),
-             CheckoutDialog
-  SmokeTest.java   A standalone, no-GUI-needed test that loads the CSV data
-                   and fires 20+ concurrent threads at a flash sale to prove
-                   InventoryManager never oversells. Run it directly to see
-                   the proof: `mvn compile exec:java -Dexec.mainClass=com.flashshoes.SmokeTest`
-                   (or just run the class from your IDE).
+model/ Plain domain classes — User hierarchy, Product, FlashSale, Cart,
+Order, OrderItem, PaymentMethod + 3 implementations
+service/ Business logic — InventoryManager (thread-safe stock),
+FlashSaleScheduler (countdown thread), OrderProcessor
+(producer-consumer order settlement), FileManager (CSV I/O),
+DataStore (wires everything together, single source of truth)
+ui/ JavaFX screens — LoginScreen, RegisterScreen, CustomerDashboard,
+AdminDashboard (includes a live concurrency stress-test tab),
+CheckoutDialog
+SmokeTest.java A standalone, no-GUI-needed test that loads the CSV data
+and fires 20+ concurrent threads at a flash sale to prove
+InventoryManager never oversells. Run it directly to see
+the proof: mvn compile exec:java -Dexec.mainClass=com.flashshoes.SmokeTest
+(or just run the class from your IDE).
 data/
-  products.csv, users.csv, flashsales.csv, orders.csv
-  images/    One placeholder card image per product (see "About the dataset")
-generate_data.py   Regenerates all of the above from scratch
-```
+products.csv, users.csv, flashsales.csv, orders.csv
+images/ Real product photos copied from the Kaggle dataset (see "About the dataset")
+kaggle_dataset/ Where you place the downloaded Kaggle dataset (gitignored — not committed)
+import_dataset.py Builds data/*.csv + data/images/ from the real Kaggle dataset
 
 ## About the dataset
 
-The original plan was to use Kaggle's Myntra Fashion Product Images Dataset filtered to
-footwear. That dataset needs to be downloaded from kaggle.com, which wasn't reachable from
-the sandbox this project was built in — so `generate_data.py` instead **synthesizes** a
-realistic 60-item shoe catalogue (real brand-style names, real category/price patterns
-across Running/Casual/Formal/Sports/Sandals) and draws a simple labeled placeholder card
-per product instead of a real photo.
+Product photos, names, categories, gender, and color all come from Kaggle's
+**Fashion Product Images (Small)** dataset by paramaggarwal:
+https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
 
-**To swap in the real Kaggle dataset and real photos:**
-1. Download "Fashion Product Images Dataset" from Kaggle, filter `styles.csv` to
-   `masterCategory == "Footwear"`.
-2. Match each row's `id` to its image in the dataset's `images/` folder.
-3. Write your own loader (or adapt `generate_data.py`) that maps those columns into
-   `data/products.csv`'s schema (`id,name,brand,category,gender,price,stock,imagePath`) —
-   you'll need to invent a `price` column since the dataset doesn't include one.
-4. Point `imagePath` at the real downloaded image files instead of `data/images/*.png`.
+Nothing about product identity is invented — `import_dataset.py` reads the real
+`styles.csv`, keeps only footwear rows (Casual/Formal/Sports Shoes, Sandals, Flip
+Flops, Flats, Heels), maps them onto this app's five category buckets
+(Running/Casual/Formal/Sports/Sandals), derives `brand` from the real product title
+(Myntra listings are titled `"<Brand> <Gender> <Description>"`), and copies the real
+photo for each chosen product into `data/images/`.
 
-Re-running `python3 generate_data.py` at any point regenerates fresh synthetic data
-(including flash sales timed relative to "now" — useful right before a demo/viva so
-countdowns look fresh instead of already-expired).
+Two fields genuinely don't exist in this dataset — no product-photo dataset carries a
+store's live price or stock, because that's internal business data, not a catalog
+attribute — so `import_dataset.py` assigns those the way any store owner would: a
+category-based price band and a default stock range, both set once, near the top of
+the script, not per-item guesswork. Search that file for `PRICE_RANGES` and
+`STOCK_RANGE` if you want to change them.
+
+**To (re)build the dataset:**
+1. Download "Fashion Product Images (Small)" from Kaggle (needs a free Kaggle account).
+2. Unzip it so this project folder has `kaggle_dataset/styles.csv` and
+   `kaggle_dataset/images/<id>.jpg`.
+3. Run `python3 import_dataset.py` (needs `pip install pillow` for the one generic
+   "no image" admin icon — everything else uses the standard library only).
+
+Re-running it regenerates `data/*.csv` fresh, including flash sales timed relative to
+"now" — useful right before a demo/viva so countdowns look fresh instead of already
+expired. `kaggle_dataset/` itself is gitignored (it's ~280MB of someone else's
+dataset) — only the filtered, copied-out `data/images/` subset gets committed.
 
 ## Demoing the concurrency requirement
 
@@ -93,7 +101,7 @@ exact same `InventoryManager.reserveFlashSaleStock()` method the real checkout f
 |---|---|---|
 | Core & Concurrency | Person A | `model/`, `InventoryManager`, `FlashSaleScheduler`, `OrderProcessor`, `SmokeTest` |
 | Customer-facing UI | Person B | `LoginScreen`, `RegisterScreen`, `CustomerDashboard`, `CheckoutDialog` |
-| Admin UI & Data | Person C | `AdminDashboard`, `FileManager`, `generate_data.py`, dataset swap if you go for real photos |
+| Admin UI & Data | Person C | `AdminDashboard`, `FileManager`, `import_dataset.py` |
 
 Everyone should still touch each other's areas over the project (small fixes, polish,
 testing) so GitHub commit history shows balanced contribution — the rubric checks this
@@ -101,12 +109,12 @@ explicitly.
 
 ## What's left for your group to do
 
-This is a complete, compiling, working baseline — not a stub. Realistically still needed:
-- Polish pass on UI styling (currently functional, minimally styled — a good CSS file
-  in `resources/` would go a long way for the "User Interface" rubric row)
+This is a complete, compiling, working baseline — not a stub. A CSS theme
+(`resources/com/flashshoes/css/app.css`), the UML diagram (`uml/`), and a
+`ProjectReport.docx` template are already included. Realistically still needed:
+- Run `import_dataset.py` against the real Kaggle data (see "About the dataset" above)
+  and re-check the catalogue looks right (brand extraction, category mapping)
 - More thorough input validation and error dialogs
-- `UML Class Diagram` export in draw.io/StarUML with strict UML notation (a working
-  version of this diagram was built earlier in this conversation as a design reference)
-- `ProjectReport.pdf` — design choices, what changed from the original UML while coding,
-  and your actual task division
+- Fill in the `[ placeholders ]` in `ProjectReport.docx` with your group's actual
+  challenges, UML evolution, and task division, then export it to PDF
 - Push to GitHub, get `GitHubLink.txt` ready, and get on the viva slot list early

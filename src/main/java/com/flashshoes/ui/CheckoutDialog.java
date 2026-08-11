@@ -8,7 +8,6 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Collects a payment method choice, attempts stock reservation through
@@ -47,12 +46,12 @@ public class CheckoutDialog extends Dialog<Order> {
             List<OrderItem> items = new ArrayList<>();
             List<Runnable> rollbacks = new ArrayList<>();
 
-            // Reserve stock line by line through InventoryManager — this is the
+            // Reserve stock line by line through InventoryManager - this is the
             // thread-safe path; if any line fails (e.g. a flash sale sold out to
             // another thread first), everything reserved so far is rolled back.
-            for (Map.Entry<Product, Integer> entry : cart.getItems().entrySet()) {
-                Product product = entry.getKey();
-                int qty = entry.getValue();
+            for (CartLine line : cart.getLines()) {
+                Product product = line.getProduct();
+                int qty = line.getQuantity();
                 FlashSale sale = activeSaleFor(store, product);
 
                 boolean reserved;
@@ -70,11 +69,11 @@ public class CheckoutDialog extends Dialog<Order> {
                 if (!reserved) {
                     for (Runnable r : rollbacks) r.run();
                     new Alert(Alert.AlertType.WARNING,
-                            "Sorry, " + product.getName() + " just sold out. Please update your cart.")
+                            "Sorry, " + product.getName() + " (size " + line.getSize() + ") just sold out. Please update your cart.")
                             .showAndWait();
                     return null;
                 }
-                items.add(new OrderItem(product, qty, unitPrice));
+                items.add(new OrderItem(product, line.getSize(), qty, unitPrice));
             }
 
             double total = 0;
@@ -105,7 +104,7 @@ public class CheckoutDialog extends Dialog<Order> {
 
             cart.clear();
 
-            // Hand off to the background OrderProcessor instead of confirming inline —
+            // Hand off to the background OrderProcessor instead of confirming inline -
             // producer side of the producer-consumer pipeline.
             store.orderProcessor.submit(order);
 

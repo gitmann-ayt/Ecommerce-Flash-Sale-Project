@@ -126,7 +126,7 @@ public class FileManager {
         List<String[]> rows = readCsv("orders.csv");
         Map<String, List<String[]>> byOrderId = new LinkedHashMap<>();
         for (String[] r : rows) {
-            // orderId,customerId,productId,quantity,priceAtPurchase,timestamp,status,paymentMethod
+            // orderId,customerId,productId,quantity,size,priceAtPurchase,timestamp,status,paymentMethod
             byOrderId.computeIfAbsent(r[0], k -> new ArrayList<>()).add(r);
         }
         for (Map.Entry<String, List<String[]>> entry : byOrderId.entrySet()) {
@@ -138,11 +138,11 @@ public class FileManager {
             for (String[] line : lines) {
                 Product product = productsById.get(line[2]);
                 if (product == null) continue;
-                items.add(new OrderItem(product, Integer.parseInt(line[3]), Double.parseDouble(line[4])));
+                items.add(new OrderItem(product, line[4], Integer.parseInt(line[3]), Double.parseDouble(line[5])));
             }
             Order order = new Order(entry.getKey(), customer, items);
-            order.updateStatus(OrderStatus.valueOf(first[6]));
-            order.setPaymentMethodUsed(first[7]);
+            order.updateStatus(OrderStatus.valueOf(first[7]));
+            order.setPaymentMethodUsed(first[8]);
             orders.add(order);
         }
         return orders;
@@ -150,12 +150,13 @@ public class FileManager {
 
     public void saveOrders(Collection<Order> orders) {
         List<String[]> rows = new ArrayList<>();
-        rows.add(new String[]{"orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod"});
+        rows.add(new String[]{"orderId", "customerId", "productId", "quantity", "size", "priceAtPurchase", "timestamp", "status", "paymentMethod"});
         for (Order o : orders) {
             for (OrderItem item : o.getItems()) {
                 rows.add(new String[]{
                         o.getOrderId(), o.getCustomer().getUserId(), item.getProduct().getProductId(),
-                        String.valueOf(item.getQuantity()), String.valueOf(item.getPriceAtPurchase()),
+                        String.valueOf(item.getQuantity()), item.getSize() == null ? "" : item.getSize(),
+                        String.valueOf(item.getPriceAtPurchase()),
                         o.getTimestamp().format(FMT), o.getStatus().name(),
                         o.getPaymentMethodUsed() == null ? "" : o.getPaymentMethodUsed()
                 });
@@ -163,7 +164,7 @@ public class FileManager {
         }
         writeCsv("orders.csv", rows);
     }
-
+    
     // ---------------- CSV HELPERS ----------------
 
     private List<String[]> readCsv(String filename) {

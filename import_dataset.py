@@ -242,7 +242,7 @@ with open(os.path.join(DATA_DIR, "flashsales.csv"), "w", newline="") as f:
 
 with open(os.path.join(DATA_DIR, "orders.csv"), "w", newline="") as f:
     w = csv.writer(f)
-    w.writerow(["orderId", "customerId", "productId", "quantity", "priceAtPurchase", "timestamp", "status", "paymentMethod"])
+    w.writerow(["orderId", "customerId", "productId", "quantity", "size", "priceAtPurchase", "timestamp", "status", "paymentMethod"])
 
 print(f"Imported {len(products)} real products (with real photos) across "
       f"{len(rows_by_category)} categories, {len(users)} seed users, "

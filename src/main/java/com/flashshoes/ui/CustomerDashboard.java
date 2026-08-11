@@ -16,18 +16,27 @@ import javafx.scene.text.FontWeight;
 import java.io.File;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CustomerDashboard extends BorderPane {
+
+    private static final String ALL_CATEGORIES = "All";
 
     private final DataStore store = DataStore.getInstance();
     private final Customer customer;
 
     private final FlowPane productGrid = new FlowPane();
+    private final HBox categoryBar = new HBox(8);
+    private final ToggleGroup categoryGroup = new ToggleGroup();
+    private final TextField searchField = new TextField();
     private final VBox cartBox = new VBox(8);
     private final Label cartTotalLabel = new Label();
-    private final VBox flashSaleBanner = new VBox(4);
+    private final VBox flashSaleBanner = new VBox(8);
     private final Label welcomeLabel = new Label();
+
+    private String selectedCategory = ALL_CATEGORIES;
 
     public CustomerDashboard() {
         this.customer = (Customer) store.getCurrentUser();
@@ -57,9 +66,11 @@ public class CustomerDashboard extends BorderPane {
         HBox.setHgrow(spacer, Priority.ALWAYS);
 
         Button historyBtn = new Button("My Orders");
+        historyBtn.getStyleClass().add("secondary");
         historyBtn.setOnAction(e -> showOrderHistory());
 
         Button logoutBtn = new Button("Log Out");
+        logoutBtn.getStyleClass().add("secondary");
         logoutBtn.setOnAction(e -> {
             customer.logout();
             store.setCurrentUser(null);
@@ -71,11 +82,24 @@ public class CustomerDashboard extends BorderPane {
     }
 
     private Node buildCenter() {
-        VBox center = new VBox(12);
+        VBox center = new VBox(14);
         center.setPadding(new Insets(16));
 
-        flashSaleBanner.setPadding(new Insets(12));
+        flashSaleBanner.setPadding(new Insets(14));
         flashSaleBanner.setStyle("-fx-background-color: #FCE8E6; -fx-background-radius: 8;");
+
+        Label catalogueHeader = new Label("Shop by category");
+        catalogueHeader.setFont(Font.font("System", FontWeight.BOLD, 15));
+
+        categoryBar.setAlignment(Pos.CENTER_LEFT);
+
+        searchField.setPromptText("Search by name or brand...");
+        searchField.setMaxWidth(320);
+        searchField.textProperty().addListener((obs, oldVal, newVal) -> refreshProductGrid());
+
+        HBox filterRow = new HBox(16, categoryBar, searchField);
+        filterRow.setAlignment(Pos.CENTER_LEFT);
+        HBox.setHgrow(categoryBar, Priority.ALWAYS);
 
         productGrid.setHgap(14);
         productGrid.setVgap(14);
@@ -85,7 +109,7 @@ public class CustomerDashboard extends BorderPane {
         scrollPane.setFitToWidth(true);
         VBox.setVgrow(scrollPane, Priority.ALWAYS);
 
-        center.getChildren().addAll(flashSaleBanner, new Label("Catalogue"), scrollPane);
+        center.getChildren().addAll(flashSaleBanner, catalogueHeader, filterRow, scrollPane);
         return center;
     }
 
@@ -114,45 +138,116 @@ public class CustomerDashboard extends BorderPane {
     }
 
     private void refresh() {
-        welcomeLabel.setText("Hi, " + customer.getName() + "  |  Wallet: $" + String.format("%.2f", customer.getWalletBalance()));
+        welcomeLabel.setText("Hi, " + customer.getName() + "   Wallet: $" + String.format("%.2f", customer.getWalletBalance()));
         refreshFlashSaleBanner();
+        refreshCategoryBar();
         refreshProductGrid();
         refreshCart();
+    }
+
+    /** Builds the "All / Casual / Formal / ..." filter chips from whatever categories actually exist right now. */
+    private void refreshCategoryBar() {
+        categoryBar.getChildren().clear();
+
+        Set<String> categories = new LinkedHashSet<>();
+        categories.add(ALL_CATEGORIES);
+        for (Product p : store.getAllProducts()) {
+            categories.add(p.getCategory());
+        }
+
+        for (String category : categories) {
+            ToggleButton chip = new ToggleButton(category);
+            chip.setToggleGroup(categoryGroup);
+            chip.getStyleClass().add("category-chip");
+            chip.setSelected(category.equals(selectedCategory));
+            chip.setOnAction(e -> {
+                selectedCategory = category;
+                refreshProductGrid();
+            });
+            categoryBar.getChildren().add(chip);
+        }
+
+        // Don't let the user click the active chip and end up with nothing selected.
+        categoryGroup.selectedToggleProperty().addListener((obs, oldToggle, newToggle) -> {
+            if (newToggle == null && oldToggle != null) {
+                categoryGroup.selectToggle(oldToggle);
+            }
+        });
     }
 
     private void refreshFlashSaleBanner() {
         flashSaleBanner.getChildren().clear();
         List<FlashSale> active = store.getActiveFlashSales();
         if (active.isEmpty()) {
-            Label none = new Label("No flash sales running right now — check back soon!");
+            Label none = new Label("No flash sales running right now. Check back soon!");
             flashSaleBanner.getChildren().add(none);
             return;
         }
-        Label header = new Label("⚡ " + active.size() + " Flash Sale(s) live now!");
-        header.setFont(Font.font("System", FontWeight.BOLD, 14));
+        Label header = new Label("\u26A1 " + active.size() + " flash sale(s) live now");
+        header.setFont(Font.font("System", FontWeight.BOLD, 15));
         header.setTextFill(Color.web("#C0392B"));
         flashSaleBanner.getChildren().add(header);
+
         for (FlashSale sale : active) {
-            long secondsLeft = Duration.between(LocalDateTime.now(), sale.getEndTime()).getSeconds();
-            String timeText = secondsLeft > 0 ? formatDuration(secondsLeft) : "ending...";
-            Label line = new Label(String.format("%s — %.0f%% off, %d left — ends in %s",
-                    sale.getProduct().getName(), sale.getDiscountPercent(), sale.getLimitedStock(), timeText));
-            flashSaleBanner.getChildren().add(line);
+            flashSaleBanner.getChildren().add(buildFlashSaleRow(sale));
         }
+    }
+
+    /** One flash sale as a proper row (name, discount badge, stock, timer) instead of one long dashed sentence. */
+    private Node buildFlashSaleRow(FlashSale sale) {
+        HBox row = new HBox(10);
+        row.setAlignment(Pos.CENTER_LEFT);
+        row.setPadding(new Insets(6, 10, 6, 10));
+        row.setStyle("-fx-background-color: white; -fx-background-radius: 6;");
+
+        Label name = new Label(sale.getProduct().getName());
+        name.setFont(Font.font("System", FontWeight.BOLD, 12));
+        name.setMaxWidth(220);
+        name.setWrapText(true);
+        HBox.setHgrow(name, Priority.ALWAYS);
+
+        Label discountBadge = new Label(String.format("%.0f%% OFF", sale.getDiscountPercent()));
+        discountBadge.setStyle("-fx-background-color: #C0392B; -fx-text-fill: white; " +
+                "-fx-background-radius: 4; -fx-padding: 2 8 2 8; -fx-font-weight: bold; -fx-font-size: 11;");
+
+        Label stockLabel = new Label(sale.getLimitedStock() + " left");
+        stockLabel.setStyle("-fx-text-fill: #666; -fx-font-size: 11;");
+
+        long secondsLeft = Duration.between(LocalDateTime.now(), sale.getEndTime()).getSeconds();
+        String timeText = secondsLeft > 0 ? formatDuration(secondsLeft) : "ending...";
+        Label timerLabel = new Label(timeText);
+        timerLabel.setStyle("-fx-text-fill: #1F3A5F; -fx-font-weight: bold; -fx-font-size: 11; " +
+                "-fx-background-color: #EAF1FB; -fx-background-radius: 4; -fx-padding: 2 8 2 8;");
+
+        row.getChildren().addAll(name, discountBadge, stockLabel, timerLabel);
+        return row;
     }
 
     private String formatDuration(long totalSeconds) {
         long h = totalSeconds / 3600;
         long m = (totalSeconds % 3600) / 60;
         long s = totalSeconds % 60;
-        if (h > 0) return String.format("%dh %dm", h, m);
-        return String.format("%dm %ds", m, s);
+        if (h > 0) return String.format("%dh %dm left", h, m);
+        return String.format("%dm %ds left", m, s);
     }
 
     private void refreshProductGrid() {
         productGrid.getChildren().clear();
+        String query = searchField.getText() == null ? "" : searchField.getText().trim().toLowerCase();
+
         for (Product product : store.getAllProducts()) {
+            if (!selectedCategory.equals(ALL_CATEGORIES) && !product.getCategory().equals(selectedCategory)) {
+                continue;
+            }
+            if (!query.isEmpty()
+                    && !product.getName().toLowerCase().contains(query)
+                    && !product.getBrand().toLowerCase().contains(query)) {
+                continue;
+            }
             productGrid.getChildren().add(buildProductCard(product));
+        }
+        if (productGrid.getChildren().isEmpty()) {
+            productGrid.getChildren().add(new Label("No products match your search/filter."));
         }
     }
 
@@ -160,7 +255,7 @@ public class CustomerDashboard extends BorderPane {
         VBox card = new VBox(6);
         card.setPadding(new Insets(10));
         card.setPrefWidth(190);
-        card.setStyle("-fx-background-color: white; -fx-border-color: #DDD; -fx-border-radius: 6; -fx-background-radius: 6;");
+        card.getStyleClass().add("product-card");
 
         ImageView imageView = new ImageView(loadImage(product.getImagePath()));
         imageView.setFitWidth(170);
@@ -173,7 +268,7 @@ public class CustomerDashboard extends BorderPane {
         name.setWrapText(true);
         name.setFont(Font.font("System", FontWeight.BOLD, 12));
 
-        Label brand = new Label(product.getBrand() + " · " + product.getCategory());
+        Label brand = new Label(product.getBrand() + " \u00B7 " + product.getCategory());
         brand.setStyle("-fx-text-fill: #888; -fx-font-size: 10;");
 
         Label priceLabel;
@@ -191,14 +286,25 @@ public class CustomerDashboard extends BorderPane {
                 : product.getStockQuantity() + " in stock");
         stockLabel.setStyle("-fx-font-size: 10; -fx-text-fill: #666;");
 
+        ComboBox<String> sizeBox = new ComboBox<>();
+        sizeBox.getItems().addAll(SizeCatalog.sizesFor(product.getGender()));
+        sizeBox.setPromptText("Size");
+        sizeBox.setMaxWidth(Double.MAX_VALUE);
+
         Button addBtn = new Button(saleForProduct != null ? "Grab it!" : "Add to Cart");
         addBtn.setMaxWidth(Double.MAX_VALUE);
         addBtn.setOnAction(e -> {
-            customer.addToCart(product, 1);
+            String size = sizeBox.getValue();
+            if (size == null) {
+                sizeBox.setStyle("-fx-border-color: #C0392B; -fx-border-width: 1.5;");
+                return;
+            }
+            sizeBox.setStyle("");
+            customer.addToCart(product, size, 1);
             refreshCart();
         });
 
-        card.getChildren().addAll(imageView, name, brand, priceLabel, stockLabel, addBtn);
+        card.getChildren().addAll(imageView, name, brand, priceLabel, stockLabel, sizeBox, addBtn);
         return card;
     }
 
@@ -221,17 +327,16 @@ public class CustomerDashboard extends BorderPane {
     private void refreshCart() {
         cartBox.getChildren().clear();
         Cart cart = customer.getCart();
-        for (var entry : cart.getItems().entrySet()) {
-            Product p = entry.getKey();
-            int qty = entry.getValue();
+        for (CartLine line : cart.getLines()) {
             HBox row = new HBox(8);
             row.setAlignment(Pos.CENTER_LEFT);
-            Label label = new Label(p.getName() + " x" + qty);
+            Label label = new Label(line.getProduct().getName() + "  (size " + line.getSize() + ")  x" + line.getQuantity());
             label.setWrapText(true);
             label.setMaxWidth(160);
             Button removeBtn = new Button("x");
+            removeBtn.getStyleClass().add("secondary");
             removeBtn.setOnAction(e -> {
-                cart.removeItem(p);
+                cart.removeLine(line);
                 refreshCart();
             });
             Region spacer = new Region();
@@ -251,7 +356,7 @@ public class CustomerDashboard extends BorderPane {
         dialog.showAndWait().ifPresent(order -> {
             refresh();
             new Alert(Alert.AlertType.INFORMATION,
-                    "Order placed! It's now processing — check 'My Orders' shortly for confirmation.")
+                    "Order placed! It's now processing, check 'My Orders' shortly for confirmation.")
                     .showAndWait();
         });
     }
@@ -259,9 +364,9 @@ public class CustomerDashboard extends BorderPane {
     private void showOrderHistory() {
         StringBuilder sb = new StringBuilder();
         for (Order o : customer.getOrderHistory()) {
-            sb.append(o.getOrderId()).append(" — $")
+            sb.append(o.getOrderId()).append(":  $")
               .append(String.format("%.2f", o.getTotalAmount()))
-              .append(" — ").append(o.getStatus()).append("\n");
+              .append("  (").append(o.getStatus()).append(")\n");
         }
         if (sb.length() == 0) sb.append("No orders yet.");
         new Alert(Alert.AlertType.INFORMATION, sb.toString()).showAndWait();
