@@ -44,6 +44,7 @@ public class DataStore {
         for (Product p : fileManager.loadProducts()) productsById.put(p.getProductId(), p);
         for (User u : fileManager.loadUsers()) usersById.put(u.getUserId(), u);
         flashSales.addAll(fileManager.loadFlashSales(productsById));
+        flashSales.forEach(FlashSale::refreshStatus);
 
         Map<String, Customer> customersById = new HashMap<>();
         for (User u : usersById.values()) {

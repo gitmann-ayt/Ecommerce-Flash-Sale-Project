@@ -42,7 +42,7 @@ public class FlashSale {
         LocalDateTime now = LocalDateTime.now();
         if (now.isBefore(startTime)) {
             status = SaleStatus.UPCOMING;
-        } else if (now.isAfter(endTime) || limitedStock.get() <= 0 && status == SaleStatus.ACTIVE) {
+        } else if (now.isAfter(endTime) || (limitedStock.get() <= 0 && status == SaleStatus.ACTIVE)) {
             status = SaleStatus.ENDED;
         } else {
             status = SaleStatus.ACTIVE;

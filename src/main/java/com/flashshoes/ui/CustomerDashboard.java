@@ -49,6 +49,8 @@ public class CustomerDashboard extends BorderPane {
         store.flashSaleScheduler.setListener(this::updateFlashSaleStatus);
         store.orderProcessor.setListener(order -> refreshCart());
 
+        store.getAllFlashSales().forEach(s -> s.refreshStatus()); // prime the status
+
         refresh();
         knownActiveSales = store.getActiveFlashSales().size();
     }
@@ -353,9 +355,10 @@ public class CustomerDashboard extends BorderPane {
             labelBox.getChildren().addAll(label, unitPrice);
             HBox.setHgrow(labelBox, Priority.ALWAYS);
 
-            Button minusBtn = new Button("-");
+            Button minusBtn = new Button("−");   // use proper minus sign, not hyphen
             minusBtn.getStyleClass().add("secondary");
-            minusBtn.setMinWidth(26);
+            minusBtn.setPadding(new Insets(4, 8, 4, 8));  // ADD THIS LINE
+            minusBtn.setMinWidth(Region.USE_PREF_SIZE);
             minusBtn.setOnAction(e -> {
                 cart.updateQuantity(line, line.getQuantity() - 1);
                 refreshCart();
@@ -367,14 +370,16 @@ public class CustomerDashboard extends BorderPane {
 
             Button plusBtn = new Button("+");
             plusBtn.getStyleClass().add("secondary");
-            plusBtn.setMinWidth(26);
+            plusBtn.setPadding(new Insets(4, 8, 4, 8));   // ADD THIS LINE
+            plusBtn.setMinWidth(Region.USE_PREF_SIZE);     // ADD THIS LINE
             plusBtn.setOnAction(e -> {
                 cart.updateQuantity(line, line.getQuantity() + 1);
                 refreshCart();
             });
 
-            Button removeBtn = new Button("x");
+            Button removeBtn = new Button("✕");
             removeBtn.getStyleClass().add("secondary");
+            removeBtn.setPadding(new Insets(4, 8, 4, 8));
             removeBtn.setOnAction(e -> {
                 cart.removeLine(line);
                 refreshCart();
